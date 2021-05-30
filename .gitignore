@@ -1,0 +1,21 @@
+# 编译中间文件
+*.gch
+*.asm
+*.ihx
+*.lk
+*.lst
+*.map
+*.mem
+*.rel
+*.rst
+*.sym
+
+# 格式化文件生成的中间文件
+tools/code.c
+tools/formatted_code.c
+tools/image_file.txt
+
+# 文档
+**/build
+docs/source/api
+!docs/**/*.rst

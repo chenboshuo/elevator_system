@@ -1,0 +1,1 @@
+../myreport_template/myreport.cls

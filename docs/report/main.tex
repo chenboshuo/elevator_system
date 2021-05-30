@@ -1,0 +1,29 @@
+\documentclass[pdfCover]{myreport} % 需要pdf封面
+% \documentclass{myreport}
+\title{测试myreport}
+\author{陈伯硕}
+\date{\today}
+
+\usepackage{subfiles}
+\begin{document}
+\maketitle
+
+% Generate the Table of Contents if it's needed.
+\tableofcontents
+\newpage
+
+\section{section}
+\subsection{subsection}
+\subsubsection{subsubsection}
+
+\section{插入代码}
+\begin{codebox}
+  \Procname{$bubble\_sort$($A$: the array, $n$: the length of nums)}
+  \li $a = 1$
+  % \li
+
+\end{codebox}
+
+\bibliography{reference}
+\nocite{GithubData}
+\end{document}
