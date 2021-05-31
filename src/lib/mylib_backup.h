@@ -20,7 +20,7 @@
 #define __code code
 #define __interrupt interrupt
 #endif
-///@}S
+///@}
 
 //!< @defgroup 寄存器别名
 ///@{
