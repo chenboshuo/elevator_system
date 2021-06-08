@@ -38,7 +38,7 @@ PROJECT_NAME           = "嵌入式开发期末课程设计模块文档与代码
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = "chenboshuo(陈伯硕)"
+PROJECT_NUMBER         = "Chen Boshuo(陈伯硕)  Zhang Wei(张玮)"
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
