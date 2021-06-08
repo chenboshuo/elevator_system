@@ -32,7 +32,7 @@ unsigned char key_buffer[KEY_LINE_SIZE][KEY_COL_SIZE] = {
 };
 
 /// 记录按键状态
-static unsigned int key_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
+static unsigned char key_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
@@ -40,7 +40,7 @@ static unsigned int key_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
 };
 
 // 记录按键之前的状态
-static unsigned int key_pre_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
+static unsigned char key_pre_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
