@@ -5,13 +5,6 @@ help :
 	@grep -h -E '^##' ${MAKEFILE_LIST} | sed -e 's/## //g' \
 		| column -t -s ':'
 
-%.out: %.ihx
-	stcgal -P stc89 $<
-
-## make *.ihx : generate the ihx files
-# https://askubuntu.com/a/522776
-%.ihx: %.c
-	sdcc $<
 ## make doxygen: generate doxygen docs
 doxygen:
 	cd docs
