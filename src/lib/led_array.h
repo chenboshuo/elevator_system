@@ -31,9 +31,20 @@ void show_in_array(int row_id, int image_code) {
   DATA = image_code;
 }
 
+/**
+ * 闪烁一次之后固定常亮
+ * @param line_id 行号
+ * @param col_id  列号
+ * @param clock   时钟，400的时候闪烁，要求>=0
+ * 800之后将该元素加入base_map
+ */
 void blink_bit_and_appear(int line_id, int col_id, int clock) {
-  // int added_code = ~(1 << (ARRY_COL_SIZE - 1 - col_id));
-  int added_code = ~(1 << col_id);
+  unsigned char added_code = ~(1 << col_id);
+  if ((added_code | base_image[line_id]) != 0xFF) {
+    // added_code 要点亮的位为 0, base_image 对应数位如果是 0,
+    // 说明函数调用之前该位置已经点亮，函数不做任何操作
+    return;
+  }
 
   if (clock < 400) {
     show_in_array(line_id, base_image[line_id] & added_code);
@@ -41,6 +52,26 @@ void blink_bit_and_appear(int line_id, int col_id, int clock) {
   }
   if (clock == 800) {
     base_image[line_id] &= added_code;
+  }
+}
+
+/**
+ * 闪烁一次并消失
+ * @param line_id 行号
+ * @param col_id  列号
+ * @param clock   时钟，在函数中400-800期间显示，要求>=0
+ */
+void blink_bit_and_disappear(int line_id, int col_id, int clock) {
+  int deleted_code = (1 << col_id);
+  if ((base_image[line_id] & deleted_code) != 0) {
+    // 要熄灭的位为 1, 若 base_map 的对应位置为 1,
+    // 说明灯已经熄灭，不做任何操作
+    return;
+  }
+  base_image[line_id] |= deleted_code;
+
+  if (clock > 400 && clock < 800) {
+    show_in_array(line_id, base_image[line_id] & (~deleted_code));
   }
 }
 

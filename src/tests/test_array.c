@@ -23,11 +23,16 @@ void flash_and_update() interrupt T0_OVERFLOW {
   // 更新计数器初值
   TIME_1MS();
 
-  // 显示底图
-  show_in_array(line_id, base_image[line_id]);
-
   // 处理闪烁
   blink_bit_and_appear(0, 0, blink_clock);
+  blink_bit_and_appear(1, 0, blink_clock);
+
+  if (blink_clock > 3000) {
+    blink_bit_and_disappear(0, 0, blink_clock - 3000);
+  }
+
+  // 显示底图
+  show_in_array(line_id, base_image[line_id]);
 
   // 处理下一行
   ++line_id;                         // 下一次刷新下一行
