@@ -14,8 +14,8 @@
  * @param light_code 代表LED 灯的编码 如 1111 1110 表示最右边的灯
  */
 void open_lights(int light_code) {
-  ADDRESS = ENABLE_LED_ARRAYS;
   DATA = CLOSE_ALL;
+  ADDRESS = ENABLE_LED_ARRAYS;
   DATA = light_code;
 }
 
