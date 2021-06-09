@@ -4,6 +4,7 @@
 #include "../lib/alias.h"
 #include "../lib/interrupt.h"
 // #include "../lib/key.h"
+#include "../lib/direction.h"
 #include "../lib/led_array.h"
 
 void main() {
@@ -29,6 +30,16 @@ void flash_and_update() interrupt T0_OVERFLOW {
 
   if (blink_clock > 3000) {
     blink_bit_and_disappear(0, 0, blink_clock - 3000);
+  }
+
+  if (blink_clock == 2000) {
+    move_up(LEFT_SYMBOL);
+  } else if (blink_clock == 4000) {
+    move_up(RIGHT_SYMBOL);
+  } else if (blink_clock == 5000) {
+    move_dowm(LEFT_SYMBOL);
+  } else if (blink_clock == 6000) {
+    move_dowm(RIGHT_SYMBOL);
   }
 
   // 显示底图
