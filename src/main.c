@@ -53,7 +53,8 @@ void flash_and_update() interrupt T0_OVERFLOW {
   switch (key_line) {
     case 0:  // 第一行按键作为左边电梯内目标楼层的标识
       for (key_col = 0; key_col < 3; ++key_col) {
-        if (is_just_pressed(key_line, key_col)) {
+        if (key_clocks[key_line][key_col] == 0 &&
+            is_just_pressed(key_line, key_col)) {
           key_clocks[key_line][key_col] = blink_clock;
         }
         if (key_clocks[key_line][key_col] != 0) {
@@ -64,7 +65,8 @@ void flash_and_update() interrupt T0_OVERFLOW {
       break;
     case 1:  // 第二行按键作为左边电梯内目标楼层的标识
       for (key_col = 0; key_col < 3; ++key_col) {
-        if (is_just_pressed(key_line, key_col)) {
+        if (key_clocks[key_line][key_col] == 0 &&
+            is_just_pressed(key_line, key_col)) {
           key_clocks[key_line][key_col] = blink_clock;
         }
         if (key_clocks[key_line][key_col] != 0) {
@@ -75,7 +77,9 @@ void flash_and_update() interrupt T0_OVERFLOW {
       break;
     case 2:  // 第三行表明 1上，2上，3下
       for (key_col = 0; key_col < 3; ++key_col) {
-        if (is_just_pressed(key_line, key_col)) {
+        if (key_clocks[key_line][key_col] ==
+                0 &&  // 在按键按下之前保证没有闪烁过程
+            is_just_pressed(key_line, key_col)) {
           key_clocks[key_line][key_col] = blink_clock;
         }
       }
@@ -90,7 +94,7 @@ void flash_and_update() interrupt T0_OVERFLOW {
       }
       break;
     case 3:  // 第四行表明 2下
-      if (is_just_pressed(key_line, 0)) {
+      if (key_clocks[key_line][0] == 0 && is_just_pressed(key_line, 0)) {
         key_clocks[key_line][0] = blink_clock;
       }
       if (key_clocks[key_line][0] != 0) {
@@ -114,10 +118,10 @@ void flash_and_update() interrupt T0_OVERFLOW {
       show_in_array(module_choice, base_image[module_choice]);
       break;
     case 9:
-      open_data_tube(0, DIGITS_LED[0]);
+      open_data_tube(0, DIGITS_LED[1]);
       break;
     case 10:
-      open_data_tube(5, DIGITS_LED[0]);
+      open_data_tube(5, DIGITS_LED[1]);
       break;
   }
   ++module_choice;
