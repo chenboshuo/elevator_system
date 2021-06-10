@@ -1,6 +1,7 @@
 /** @file
  * @defgroup led点阵相关
  * 在该部分，列号由左到右从零开始
+ * 同时，所有clock的计时单位为100ms
  * 对于八位二进制数，最左边为最低位
  * @{
  */
@@ -21,6 +22,9 @@ unsigned char base_image[] = {
     CLOSE_ALL, CLOSE_ALL, CLOSE_ALL, CLOSE_ALL,
 };
 
+/// 用于按键闪烁的时钟
+char key_clocks[4][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+
 /** 将mask所代表的内容放到row_id
  * 注意地址最左边为mask 最低位
  * @param row_id 行号
@@ -37,9 +41,10 @@ void show_in_array(int row_id, int image_code) {
  * @param line_id 行号
  * @param col_id  列号
  * @param clock   时钟，400的时候闪烁，要求>=0
- * 800之后将该元素加入base_map
+ *                800之后将该元素加入base_map
+ *                计时间隔100ms效果最佳
  */
-void blink_bit_and_appear(int line_id, int col_id, int clock) {
+void blink_bit_and_appear(int line_id, int col_id, unsigned char clock) {
   unsigned char added_code = ~(1 << col_id);
   if ((added_code | base_image[line_id]) != 0xFF) {
     // added_code 要点亮的位为 0, base_image 对应数位如果是 0,
@@ -47,11 +52,11 @@ void blink_bit_and_appear(int line_id, int col_id, int clock) {
     return;
   }
 
-  if (clock < 400) {
+  if (clock < 4) {
     show_in_array(line_id, base_image[line_id] & added_code);
     return;  // 如果不到显示的周期，退出
   }
-  if (clock == 800) {
+  if (clock == 8) {
     base_image[line_id] &= added_code;
   }
 }
@@ -61,8 +66,9 @@ void blink_bit_and_appear(int line_id, int col_id, int clock) {
  * @param line_id 行号
  * @param col_id  列号
  * @param clock   时钟，在函数中400-800期间显示，要求>=0
+ *                计时间隔100ms效果最佳
  */
-void blink_bit_and_disappear(int line_id, int col_id, int clock) {
+void blink_bit_and_disappear(int line_id, int col_id, unsigned char clock) {
   int deleted_code = (1 << col_id);
   if ((base_image[line_id] & deleted_code) != 0) {
     // 要熄灭的位为 1, 若 base_map 的对应位置为 1,
@@ -71,7 +77,7 @@ void blink_bit_and_disappear(int line_id, int col_id, int clock) {
   }
   base_image[line_id] |= deleted_code;
 
-  if (clock > 400 && clock < 800) {
+  if (clock > 4 && clock < 8) {
     show_in_array(line_id, base_image[line_id] & (~deleted_code));
   }
 }

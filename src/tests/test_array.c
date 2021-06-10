@@ -19,7 +19,13 @@ void main() {
 
 void flash_and_update() interrupt T0_OVERFLOW {
   static int line_id = 0;
-  static int blink_clock = 0;  // 用于闪烁的周期
+  static int ms_count = 0;
+  static unsigned char blink_clock = 0;  // 用于闪烁的周期
+
+  if (ms_count == 100) {
+    ++blink_clock;
+    ms_count = 0;
+  }
 
   // 更新计数器初值
   TIME_1MS();
@@ -28,17 +34,17 @@ void flash_and_update() interrupt T0_OVERFLOW {
   blink_bit_and_appear(0, 0, blink_clock);
   blink_bit_and_appear(1, 0, blink_clock);
 
-  if (blink_clock > 3000) {
-    blink_bit_and_disappear(0, 0, blink_clock - 3000);
+  if (blink_clock > 30) {
+    blink_bit_and_disappear(0, 0, blink_clock - 30);
   }
 
-  if (blink_clock == 2000) {
+  if (blink_clock == 20) {
     move_up(LEFT_SYMBOL);
-  } else if (blink_clock == 4000) {
+  } else if (blink_clock == 40) {
     move_up(RIGHT_SYMBOL);
-  } else if (blink_clock == 5000) {
+  } else if (blink_clock == 50) {
     move_dowm(LEFT_SYMBOL);
-  } else if (blink_clock == 6000) {
+  } else if (blink_clock == 60) {
     move_dowm(RIGHT_SYMBOL);
   }
 
@@ -48,5 +54,7 @@ void flash_and_update() interrupt T0_OVERFLOW {
   // 处理下一行
   ++line_id;                         // 下一次刷新下一行
   line_id &= ARRAY_LINE_VALID_BITS;  // 数码管共7行
-  ++blink_clock;
+
+  // 计时器+1
+  ++ms_count;
 }
