@@ -1,0 +1,28 @@
+\documentclass[../main.tex]{subfiles} % 需要pdf封面
+
+\begin{document}
+
+本项目是电梯系统，
+主体程序是对电梯运行的模拟，
+主程序运行逻辑大致如下:
+
+% \cref{alg:}
+\begin{algorithm}[H]
+  \caption{主程序}
+  \begin{codebox}
+    \Procname{main()}
+      \li \While 电梯系统启动:
+      \Then
+        \li 接受起点楼层请求
+        \li 接受电梯内目的楼层请求
+        \li 确定电梯运行方向
+        \li 电梯运行
+      \End
+  \end{codebox}
+  \label{alg:main}
+\end{algorithm}
+
+
+
+
+\end{document}

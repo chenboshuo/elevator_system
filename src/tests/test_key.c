@@ -1,7 +1,7 @@
-/**
+/** @file
  * 扫描所有按键，检测是否按下
  * 参考
- * ./reference/8_5_scan_all_keys.c
+ * https://github.com/chenboshuo/learn_c51/blob/main/key_scan_all.c
  */
 #include "../lib/alias.h"
 #include "../lib/data_tube.h"
@@ -31,6 +31,7 @@ void flash_and_update() interrupt T0_OVERFLOW {
   unsigned char col_id;
   static unsigned char line_id = 0;
   static int data_tube_id = 0;
+  static int module_choice = 0;  // 选择两个模块刷新
 
   // 更新计数器初值
   TIME_1MS();
@@ -41,16 +42,19 @@ void flash_and_update() interrupt T0_OVERFLOW {
     update_key_status(line_id, col_id);  // 更新按键状态
   }
 
-  // 刷新数码管
-  if (data_tube_id == 1) {
-    open_data_tube(1, DIGITS_LED[just_pressed_line + 1] & ADD_DOT_MASK);
+  if (module_choice == 0) {
+    // 刷新数码管
+    if (data_tube_id == 1) {
+      open_data_tube(1, DIGITS_LED[just_pressed_line + 1] & ADD_DOT_MASK);
+    } else {
+      open_data_tube(0, DIGITS_LED[just_pressed_col + 1]);
+    }
+    data_tube_id = 1 - data_tube_id;
   } else {
-    open_data_tube(0, DIGITS_LED[just_pressed_col + 1]);
+    // 显示key_buffer 的值
+    open_lights(key_buffer[0][0] | 0xF0);
   }
-  data_tube_id = 1 - data_tube_id;
-
-  // 显示key_buffer 的值
-  open_lights(key_buffer[0][0] | 0xF0);
+  module_choice = 1 - module_choice;
 
   for (col_id = 0; col_id < KEY_COL_SIZE; ++col_id) {
     if (is_just_pressed(line_id, col_id)) {
