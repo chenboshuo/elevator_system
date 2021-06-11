@@ -42,8 +42,8 @@ unsigned char code DIGITS_LED[] = {
  */
 void open_data_tube(unsigned int digit_tube_id, unsigned int data_code) {
   // 8 指 ADDR3 = 1
-  ADDRESS = digit_tube_id | 0x08;
   DATA = CLOSE_ALL;  // 刷新之前关闭所有数码管防止残影
+  ADDRESS = digit_tube_id | 0x08;
   DATA = data_code;
 }
 
