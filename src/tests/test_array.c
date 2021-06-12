@@ -22,8 +22,9 @@ void flash_and_update() interrupt T0_OVERFLOW {
   static int ms_count = 0;
   static unsigned char blink_clock = 0;  // 用于闪烁的周期
 
-  if (ms_count == 100) {
+  if (ms_count == 200) {
     ++blink_clock;
+    update_key_clocks();
     ms_count = 0;
   }
 
@@ -31,11 +32,18 @@ void flash_and_update() interrupt T0_OVERFLOW {
   TIME_1MS();
 
   // 处理闪烁
-  blink_bit_and_appear(0, 0, blink_clock);
-  blink_bit_and_appear(1, 0, blink_clock);
+  if (blink_clock == 0) {
+    key_clocks[0][0] = BLINK_PROCESSING_CLOCK;
+    key_clocks[1][0] = BLINK_PROCESSING_CLOCK;
+  }
+  blink_bit_and_appear(0, 0, key_clocks[0][0]);
+  blink_bit_and_appear(1, 0, key_clocks[1][0]);
 
-  if (blink_clock > 30) {
-    blink_bit_and_disappear(0, 0, blink_clock - 30);
+  if (blink_clock == 30) {
+    key_clocks[0][0] = BLINK_PROCESSING_CLOCK;
+  }
+  if (blink_clock >= 30) {
+    blink_bit_and_disappear(0, 0, key_clocks[0][0]);
   }
 
   if (blink_clock == 20) {

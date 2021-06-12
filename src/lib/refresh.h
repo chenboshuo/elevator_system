@@ -10,6 +10,7 @@
 #include "data_tube.h"
 #include "key.h"
 #include "led_array.h"
+#include "requests.h"
 
 #define FLASH_UNIT_SIZE 11  /// 要刷新的单元数目
 
@@ -51,8 +52,9 @@ void refresh_key_line() {
   static unsigned char ms_count = 0;
   static unsigned char blink_clock = 0;
 
-  if (ms_count == 100) {
+  if (ms_count == 150) {
     ++blink_clock;
+    update_key_clocks();
     ms_count = 0;
   }
 
@@ -65,54 +67,66 @@ void refresh_key_line() {
   // 刷新键盘并响应
   switch (key_line) {
     case 0:  // 第一行按键作为左边电梯内目标楼层的标识
-      for (key_col = 0; key_col < 3; ++key_col) {
-        if (key_clocks[key_line][key_col] == 0 &&
-            is_just_pressed(key_line, key_col)) {
-          key_clocks[key_line][key_col] = blink_clock;
-        }
-        if (key_clocks[key_line][key_col] != 0) {
-          blink_bit_and_appear(2 - key_col, 0,
-                               blink_clock - key_clocks[key_line][key_col]);
-        }
-      }
-      break;
     case 1:  // 第二行按键作为左边电梯内目标楼层的标识
       for (key_col = 0; key_col < 3; ++key_col) {
-        if (key_clocks[key_line][key_col] == 0 &&
-            is_just_pressed(key_line, key_col)) {
-          key_clocks[key_line][key_col] = blink_clock;
+        if (is_just_pressed(key_line, key_col) &&
+            !has_requested[key_line][2 - key_col]) {
+          key_clocks[key_line][key_col] = BLINK_PROCESSING_CLOCK;
+          has_requested[key_line][2 - key_col] =
+              TRUE;  // 将请求发送到对应的电梯
         }
-        if (key_clocks[key_line][key_col] != 0) {
-          blink_bit_and_appear(2 - key_col, 7,
-                               blink_clock - key_clocks[key_line][key_col]);
-        }
+        // if (key_clocks[key_line][key_col] != 0) {
+        blink_bit_and_appear(2 - key_col, key_line * 7,
+                             key_clocks[key_line][key_col]);
+        // }
       }
       break;
+
     case 2:  // 第三行表明 1上，2上，3下
-      for (key_col = 0; key_col < 3; ++key_col) {
-        if (key_clocks[key_line][key_col] ==
-                0 &&  // 在按键按下之前保证没有闪烁过程
-            is_just_pressed(key_line, key_col)) {
-          key_clocks[key_line][key_col] = blink_clock;
-        }
+      // for (key_col = 0; key_col < 3; ++key_col) {
+      //   if (key_clocks[key_line][key_col] ==
+      //           0 &&  // 在按键按下之前保证没有闪烁过程
+      //       is_just_pressed(key_line, key_col)) {
+      //     key_clocks[key_line][key_col] = BLINK_PROCESSING_CLOCK;
+      //   }
+      // }
+
+      // 一层楼发送上行请求
+      if (!has_called[UP_CALL][FIRST_FLOOR] && is_just_pressed(2, 0)) {
+        key_clocks[2][0] = BLINK_PROCESSING_CLOCK;
+        has_called[UP_CALL][FIRST_FLOOR] = TRUE;
       }
-      if (key_clocks[key_line][0] != 0) {
-        blink_bit_and_appear(0, 2, blink_clock - key_clocks[key_line][0]);
+      // if (key_clocks[2][0] != 0) {
+      blink_bit_and_appear(0, 2, key_clocks[2][0]);
+      // }
+
+      // 二层发送上行请求
+      if (!has_called[UP_CALL][SECOND_FLOOR] && is_just_pressed(2, 1)) {
+        key_clocks[2][1] = BLINK_PROCESSING_CLOCK;
+        has_called[UP_CALL][SECOND_FLOOR] = TRUE;
       }
-      if (key_clocks[key_line][1] != 0) {
-        blink_bit_and_appear(0, 3, blink_clock - key_clocks[key_line][1]);
+      // if (key_clocks[2][1] != 0) {
+      blink_bit_and_appear(0, 3, key_clocks[2][1]);
+      // }
+
+      // // 三层发送下行请求
+      if (!has_called[DOWN_CALL][THIRD_FLOOR] && is_just_pressed(2, 2)) {
+        key_clocks[2][2] = BLINK_PROCESSING_CLOCK;
+        has_called[DOWN_CALL][THIRD_FLOOR] = TRUE;
       }
-      if (key_clocks[key_line][2] != 0) {
-        blink_bit_and_appear(1, 4, blink_clock - key_clocks[key_line][2]);
-      }
+      // if (key_clocks[2][2] != 0) {
+      blink_bit_and_appear(1, 4, key_clocks[2][2]);
+      // }
       break;
     case 3:  // 第四行表明 2下
-      if (key_clocks[key_line][0] == 0 && is_just_pressed(key_line, 0)) {
-        key_clocks[key_line][0] = blink_clock;
+      // 按键按下，若无请求，二层发送下行请求
+      if (!has_called[DOWN_CALL][SECOND_FLOOR] && is_just_pressed(3, 0)) {
+        key_clocks[3][0] = BLINK_PROCESSING_CLOCK;
+        has_called[DOWN_CALL][SECOND_FLOOR] = TRUE;
       }
-      if (key_clocks[key_line][0] != 0) {
-        blink_bit_and_appear(1, 3, blink_clock - key_clocks[key_line][0]);
-      }
+      // if (key_clocks[3][0] != 0) {
+      blink_bit_and_appear(1, 3, key_clocks[3][0]);
+      // }
   }
 
   // 更新linster
