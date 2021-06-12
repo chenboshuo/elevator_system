@@ -36,6 +36,9 @@ report: main_report doxygen_pdf
 	  docs/build/doxygen_latex/refman.pdf \
 		cat output docs/report/build/report.pdf
 
+## make main: Compile and run the main function file
+main:
+	make --directory=src main.out
 
 
 
