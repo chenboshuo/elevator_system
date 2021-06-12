@@ -57,7 +57,7 @@ static unsigned char key_pre_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
  * | 2       | keyOut3 | P2.1 |
  * | 3       | keyOut4 | P2.0 |
  */
-void set_listener_of_line(int line_id) {
+void set_listener_of_line(unsigned char line_id) {
   KEY_EVENT = ~(1 << (3 - line_id));  // 低四位用来设置行线的初值
 }
 
@@ -67,7 +67,7 @@ void set_listener_of_line(int line_id) {
  * @param  col_id 列号
  * @return        返回按键状态
  */
-unsigned int get_key_status_of_col(int col_id) {
+unsigned int get_key_status_of_col(unsigned char col_id) {
   unsigned int bit_loc = 4 + col_id;
   unsigned int mask = 1 << bit_loc;
   // return (KEY_EVENT & mask) >> bit_loc;
@@ -81,7 +81,7 @@ unsigned int get_key_status_of_col(int col_id) {
  * 用最低位表示最新状态
  * 最终结果只保留低四位
  */
-void update_key_buffer(int line_id, int col_id) {
+void update_key_buffer(unsigned char line_id, unsigned char col_id) {
   key_buffer[line_id][col_id] =
       ((key_buffer[line_id][col_id] << 1) | get_key_status_of_col(col_id)) &
       0x0F;
@@ -93,7 +93,7 @@ void update_key_buffer(int line_id, int col_id) {
  * @param  col_id  列号
  * @return         按下为1否则为0
  */
-unsigned int is_just_pressed(int line_id, int col_id) {
+unsigned char is_just_pressed(unsigned char line_id, unsigned char col_id) {
   // 如果没有变化，就不是刚刚按下
   if (key_pre_status[line_id][col_id] == key_status[line_id][col_id]) {
     return 0;
@@ -109,7 +109,7 @@ unsigned int is_just_pressed(int line_id, int col_id) {
  * @param line_id 行号
  * @param col_id  列号
  */
-void update_key_status(int line_id, int col_id) {
+void update_key_status(unsigned char line_id, unsigned char col_id) {
   if (key_buffer[line_id][col_id] == KEY_KEEP_PRESSED) {
     key_status[line_id][col_id] = KEY_PRESSED;
   } else if (key_buffer[line_id][col_id] == KEY_KEEP_RELEASED) {

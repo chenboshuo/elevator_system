@@ -32,7 +32,7 @@ unsigned char key_clocks[4][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
  * @param row_id 行号
  * @param code   对应二进制信息
  */
-void show_in_array(int row_id, int image_code) {
+void show_in_array(unsigned char row_id, unsigned char image_code) {
   DATA = CLOSE_ALL;
   ADDRESS = row_id;
   DATA = image_code;

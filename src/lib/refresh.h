@@ -8,6 +8,7 @@
 
 #include "alias.h"
 #include "data_tube.h"
+#include "elevator.h"
 #include "key.h"
 #include "led_array.h"
 #include "requests.h"
@@ -19,7 +20,7 @@
  * 将所有要显示的单元统一刷新
  */
 void refresh_module() {
-  static int unit_turn = 0;  /// 选择模块刷新
+  static unsigned char unit_turn = 0;  /// 选择模块刷新
   switch (unit_turn) {
     case 0:
     case 1:
@@ -32,10 +33,10 @@ void refresh_module() {
       show_in_array(unit_turn, base_image[unit_turn]);
       break;
     case 9:
-      open_data_tube(0, DIGITS_LED[1]);
+      open_data_tube(0, DIGITS_LED[right_elevator.current_level + 1]);
       break;
     case 10:
-      open_data_tube(5, DIGITS_LED[1]);
+      open_data_tube(5, DIGITS_LED[left_elevator.current_level + 1]);
       break;
   }
   ++unit_turn;
@@ -47,9 +48,9 @@ void refresh_module() {
  */
 void refresh_key_line() {
   static unsigned char key_line = 0;
+  static unsigned char ms_count = 0;
   unsigned char key_col;
 
-  static unsigned char ms_count = 0;
   static unsigned char blink_clock = 0;
 
   if (ms_count == 150) {
@@ -109,7 +110,7 @@ void refresh_key_line() {
       blink_bit_and_appear(0, 3, key_clocks[2][1]);
       // }
 
-      // // 三层发送下行请求
+      // 三层发送下行请求
       if (!has_called[DOWN_CALL][THIRD_FLOOR] && is_just_pressed(2, 2)) {
         key_clocks[2][2] = BLINK_PROCESSING_CLOCK;
         has_called[DOWN_CALL][THIRD_FLOOR] = TRUE;
