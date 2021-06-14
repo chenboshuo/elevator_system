@@ -4,10 +4,10 @@
  * https://github.com/chenboshuo/learn_c51/blob/main/key_scan_all.c
  */
 #include "../lib/alias.h"
-#include "../lib/data_tube.h"
 #include "../lib/interrupt.h"
 #include "../lib/key.h"
 #include "../lib/light.h"  // debug
+#include "../lib/seven-segment_display.h"
 #include "../lib/system_header.h"
 
 #define ADD_DOT_MASK 0x7F  /// 给行号增加小数点

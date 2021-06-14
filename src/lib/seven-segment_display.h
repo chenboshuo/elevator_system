@@ -3,8 +3,8 @@
  * @{
  */
 
-#ifndef DATA_TUBE_H
-#define DATA_TUBE_H
+#ifndef SEVEN_SEGMENT_DISPLAY_H
+#define SEVEN_SEGMENT_DISPLAY_H
 
 #include "alias.h"
 

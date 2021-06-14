@@ -6,6 +6,7 @@
 #ifndef INTERRUPT_H
 #define INTERRUPT_H
 
+#include "alias.h"
 #include "system_header.h"
 
 #define T0_STATUS TR0           //!< TR0 控制 T0 的状态
