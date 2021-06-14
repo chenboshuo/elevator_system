@@ -9,6 +9,9 @@
 #include "alias.h"
 #include "system_header.h"
 
+#define T0_OVERFLOW 1  //!< 中断号1 表示 T0溢出
+#define T1_OVERFLOW 3  //!< 中断号3 表示 T1溢出
+
 #define T0_STATUS TR0           //!< TR0 控制 T0 的状态
 #define ALLOW_INTERRUPT EA      //!< EA 寄存器控制使能所有中断
 #define ALLOW_T0_INTERRUPT ET0  //!< 允许T0中断
@@ -17,6 +20,11 @@
 #define TIME_1MS() \
   TH0 = 0xFC;      \
   TL0 = 0x67;
+
+/// 计时半毫秒的计数器
+#define TIME_half_1MS() \
+  TH0 = 0xFE;           \
+  TL0 = 0x34;
 /// 计时 2 ms 的计数器初值
 #define TIME_2MS() \
   TH0 = 0xF8;      \
@@ -33,12 +41,6 @@ void enable_timer_t0_with_interrupt() {
   ALLOW_T0_INTERRUPT = TRUE;  // 使能T0中断
   ENABLE_T0 = TRUE;           // 启动T0的控制寄存器
 }
-///@}
-
-//!< @defgroup 中断号
-///@{
-#define T0_OVERFLOW 1  //!< 中断号1 表示 T0溢出
-#define T1_OVERFLOW 3  //!< 中断号3 表示 T1溢出
 ///@}
 
 #endif

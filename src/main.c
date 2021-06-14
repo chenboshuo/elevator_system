@@ -1,11 +1,9 @@
 /** @file
  * 主函数，完成电梯模块
  */
-#include "lib/data_tube.h"
+#include "lib/elevator.h"
 #include "lib/interrupt.h"
-#include "lib/light.h"  /// debug
 #include "lib/refresh.h"
-#include "lib/system_header.h"
 
 unsigned char left_arrive_floor = FALSE;
 unsigned char right_arrive_floor = FALSE;
@@ -18,11 +16,12 @@ void main() {
 
   // 计时一秒
   enable_timer_t0_with_interrupt();
-  TIME_1MS();
+  // TIME_1MS();
+  TIME_half_1MS();
 
   while (TRUE) {
     // get direction
-    get_direction(&left_elevator);
+    // get_direction(&left_elevator);
     get_direction(&right_elevator);
 
     // 移动
@@ -32,11 +31,11 @@ void main() {
     }
 
     // 到达处理
-    arrive(&left_elevator);
-    left_arrive_floor = TRUE;
+    // arrive(&left_elevator);
+    // left_arrive_floor = TRUE;
 
-    arrive(&right_elevator);
-    right_arrive_floor = TRUE;
+    // arrive(&right_elevator);
+    // right_arrive_floor = TRUE;
 
     // debug
     // ++left_elevator.current_level;
@@ -45,9 +44,6 @@ void main() {
 }
 
 void reload_and_update() interrupt T0_OVERFLOW {
-  // 更新计数器初值
-  TIME_1MS();
-
   // 刷新模块的显示
   refresh_module();
 
@@ -63,4 +59,8 @@ void reload_and_update() interrupt T0_OVERFLOW {
   if (right_arrive_floor) {
     ;
   }
+
+  // 更新计数器初值
+  // TIME_1MS();
+  TIME_half_1MS();
 }
