@@ -15,46 +15,91 @@
 #define LEFT_ELEVATOR 0   /// 0 代表左边机位
 #define RIGHT_ELEVATOR 1  /// 1 代表右边机位
 
-#define UP 1            /// 上行记为 1
-#define NO_DIRECTION 0  /// 静止记为 0
-#define DOWN -1         /// 下行记为 -1
+#define sign(a, b) ((a - b == 0) ? 0 : ((a - b) > 0 ? 1 : -1))  // 计算a-b的符号
 
 /// 电梯实体对应数据结构
+/// 注意current_floor 0 代表一楼
 struct Elevator {
-  char current_level;
-  // char targets;    // 每一位表示一个楼层的请求
+  unsigned char current_floor;
+  unsigned char id;
   int direction;  // 记录电梯运行方向
 
-  // char direction_lamp_loc;
-  char level_lamp_loc;  // 显示楼层的数码管的位置
+  unsigned char direction_lamp_loc;
+  // unsigned char level_lamp_loc;  // 显示楼层的数码管的位置
 } left_elevator, right_elevator;
 
+/**
+ * 初始化左电梯，默认在一楼
+ */
 void init_left_evevator() {
-  left_elevator.current_level = FIRST_FLOOR;
+  left_elevator.current_floor = FIRST_FLOOR;
   // left_elevator.targets = NO_TARGET;  // 每一位表示一个楼层的请求
-  left_elevator.direction = 0;  // 记录电梯运行方向
-
-  // left_elevator.direction_lamp_loc = LEFT_SYMBOL;
-  left_elevator.level_lamp_loc = 5;
+  left_elevator.direction = NO_DIRECTION;  // 记录电梯运行方向
+  left_elevator.id = LEFT_ELEVATOR;
+  left_elevator.direction_lamp_loc = LEFT_SYMBOL;
+  // left_elevator.level_lamp_loc = 5;
 }
 
+/**
+ * 初始化右边电梯，默认在三楼
+ */
 void init_right_evevator() {
-  right_elevator.current_level = THIRD_FLOOR;
+  right_elevator.current_floor = THIRD_FLOOR;
   // right_elevator.targets = NO_TARGET;  // 每一位表示一个楼层的请求
-  right_elevator.direction = 0;  // 记录电梯运行方向
+  right_elevator.direction = NO_DIRECTION;  // 记录电梯运行方向
+  right_elevator.id = RIGHT_ELEVATOR;
 
-  // right_elevator.direction_lamp_loc = RIGHT_SYMBOL;
-  right_elevator.level_lamp_loc = 0;
+  right_elevator.direction_lamp_loc = RIGHT_SYMBOL;
+  // right_elevator.level_lamp_loc = 0;
 }
 
-void get_direction(struct Elevator* elevator) {
-  elevator->direction = DOWN;
-  ;
-}
-
+/**
+ * 处理电梯到达之后的程序
+ * @param elevator 电梯
+ */
 void arrive(struct Elevator* elevator) {
-  elevator->direction;
-  ;
+  // 换算运行方向
+  unsigned char calling_direction =
+      (elevator->direction == UP) ? UP_CALL : DOWN_CALL;
+
+  // 到达新楼层
+  elevator->current_floor = elevator->current_floor + elevator->direction;
+
+  // 清除电梯内请求
+  has_requested[elevator->id][elevator->current_floor] = FALSE;
+
+  // 关闭电梯外呼叫请求
+  has_called[calling_direction][elevator->current_floor] = FALSE;
+  // has_called[(elevator->direction == UP) ? UP_CALL : DOWN_CALL]
+  // [elevator->current_floor] = FALSE;
+}
+
+/**
+ * 获得电梯运行方向
+ * @param elevator 电梯
+ */
+void get_direction(struct Elevator* elevator) {
+  unsigned char target_floor = FIRST_FLOOR;
+  // 没有运行方向则选择运行方向
+  if (elevator->direction == NO_DIRECTION) {
+    // 若电梯内还有请求
+    if (has_any_requests(elevator->id)) {
+      // 寻找目标楼层
+      while (!has_requested[elevator->id][target_floor]) {
+        ++target_floor;
+      }
+
+      // 找到之后计算方向
+      elevator->direction = sign(target_floor, elevator->current_floor);
+    }
+  }
+
+  // 显示运行方向
+  if (elevator->direction == DOWN) {
+    move_dowm(elevator->direction_lamp_loc);
+  } else if (elevator->direction == UP) {
+    move_up(elevator->direction_lamp_loc);
+  }
 }
 ///@}
 

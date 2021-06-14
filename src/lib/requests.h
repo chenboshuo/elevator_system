@@ -16,6 +16,11 @@
 #define SECOND_FLOOR 1  /// 2楼放在索引1 的位置
 #define THIRD_FLOOR 2   /// 3楼放在索引2 的位置
 
+/// 判断是否有电梯内请求
+#define has_any_requests(elevator_id)                                \
+  (has_requested[elevator_id][0] || has_requested[elevator_id][1] || \
+   has_requested[elevator_id][2])
+
 /// 电梯内的请求
 unsigned char has_requested[2][3] = {{FALSE, FALSE, FALSE},
                                      {FALSE, FALSE, FALSE}};

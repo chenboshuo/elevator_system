@@ -20,6 +20,7 @@
 #include <reg52.h>
 #define __code code
 #define __interrupt interrupt
+#define __bit bit
 
 ///@}
 #endif

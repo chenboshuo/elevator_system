@@ -5,8 +5,8 @@
 #include "lib/interrupt.h"
 #include "lib/refresh.h"
 
-unsigned char left_arrive_floor = FALSE;
-unsigned char right_arrive_floor = FALSE;
+__bit left_arrive_floor = FALSE;
+__bit right_arrive_floor = FALSE;
 
 void main() {
   unsigned char move_clock;
@@ -21,7 +21,7 @@ void main() {
 
   while (TRUE) {
     // get direction
-    // get_direction(&left_elevator);
+    get_direction(&left_elevator);
     get_direction(&right_elevator);
 
     // 移动
@@ -31,15 +31,11 @@ void main() {
     }
 
     // 到达处理
-    // arrive(&left_elevator);
-    // left_arrive_floor = TRUE;
+    arrive(&left_elevator);
+    left_arrive_floor = TRUE;
 
-    // arrive(&right_elevator);
-    // right_arrive_floor = TRUE;
-
-    // debug
-    // ++left_elevator.current_level;
-    // left_elevator.current_level %= 3;
+    arrive(&right_elevator);
+    right_arrive_floor = TRUE;
   }
 }
 

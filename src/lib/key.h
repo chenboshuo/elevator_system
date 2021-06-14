@@ -67,7 +67,7 @@ void set_listener_of_line(unsigned char line_id) {
  * @param  col_id 列号
  * @return        返回按键状态
  */
-unsigned int get_key_status_of_col(unsigned char col_id) {
+__bit get_key_status_of_col(unsigned char col_id) {
   unsigned int bit_loc = 4 + col_id;
   unsigned int mask = 1 << bit_loc;
   // return (KEY_EVENT & mask) >> bit_loc;
@@ -98,7 +98,7 @@ unsigned char is_just_pressed(unsigned char line_id, unsigned char col_id) {
   if (key_pre_status[line_id][col_id] == key_status[line_id][col_id]) {
     return 0;
   }
-  unsigned int old_state = key_pre_status[line_id][col_id];
+  unsigned char old_state = key_pre_status[line_id][col_id];
   key_pre_status[line_id][col_id] = key_status[line_id][col_id];
   // 如果前一个状态没有按下，就认为现在刚刚按下这个键
   return (old_state != KEY_PRESSED);

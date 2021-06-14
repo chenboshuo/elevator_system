@@ -7,7 +7,7 @@
 #ifndef DIRECTION_H
 #define DIRECTION_H
 
-// #include "elevator.h"
+#include "interrupt.h"
 #include "led_array.h"
 
 #define ARROW_LINE_SIZE 5  /// 表示方向信息的行数是5

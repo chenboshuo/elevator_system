@@ -16,10 +16,6 @@ help :
 # https://askubuntu.com/a/522776
 %.ihx: %.c
 	sdcc $<
-## make doxygen: generate doxygen docs
-doxygen:
-	cd docs
-	doxygen
 
 ## make clean: clean the temp files
 clean:

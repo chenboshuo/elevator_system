@@ -34,10 +34,10 @@ void refresh_module() {
       show_in_array(unit_turn, base_image[unit_turn]);
       break;
     case 9:
-      open_data_tube(0, DIGITS_LED[right_elevator.current_level + 1]);
+      open_data_tube(0, DIGITS_LED[right_elevator.current_floor + 1]);
       break;
     case 10:
-      open_data_tube(5, DIGITS_LED[left_elevator.current_level + 1]);
+      open_data_tube(5, DIGITS_LED[left_elevator.current_floor + 1]);
       break;
   }
   ++unit_turn;
