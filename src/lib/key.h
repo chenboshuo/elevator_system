@@ -12,8 +12,11 @@
 
 #define KEY_EVENT P2  /// P2 用于处理键盘事件
 
+#define OLD_STATE_MASK 0x03  /// 保留最后两位用来保存之前状态
+
 #define KEY_PRESSED 0          /// 表示按键被按下
 #define KEY_KEEP_PRESSED 0x00  /// 四次buffer记录都记录到按键按下
+#define NEWLY_PRESSED 0x02  /// (10) 表示前一个状态释放，后一个状态按下
 
 #define KEY_RELEASED 1          /// 1 表示按键被释放
 #define KEY_KEEP_RELEASED 0x0F  /// buffer中记录到四次按键释放状态
@@ -33,14 +36,6 @@ unsigned char key_buffer[KEY_LINE_SIZE][KEY_COL_SIZE] = {
 
 /// 记录按键状态
 static unsigned char key_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
-    {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
-    {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
-    {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
-    {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
-};
-
-// 记录按键之前的状态
-static unsigned char key_pre_status[KEY_LINE_SIZE][KEY_COL_SIZE] = {
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
     {KEY_RELEASED, KEY_RELEASED, KEY_RELEASED, KEY_RELEASED},
@@ -94,14 +89,7 @@ void update_key_buffer(unsigned char line_id, unsigned char col_id) {
  * @return         按下为1否则为0
  */
 unsigned char is_just_pressed(unsigned char line_id, unsigned char col_id) {
-  // 如果没有变化，就不是刚刚按下
-  if (key_pre_status[line_id][col_id] == key_status[line_id][col_id]) {
-    return 0;
-  }
-  unsigned char old_state = key_pre_status[line_id][col_id];
-  key_pre_status[line_id][col_id] = key_status[line_id][col_id];
-  // 如果前一个状态没有按下，就认为现在刚刚按下这个键
-  return (old_state != KEY_PRESSED);
+  return (key_status[line_id][col_id] == NEWLY_PRESSED);
 }
 
 /**
@@ -110,11 +98,13 @@ unsigned char is_just_pressed(unsigned char line_id, unsigned char col_id) {
  * @param col_id  列号
  */
 void update_key_status(unsigned char line_id, unsigned char col_id) {
+  key_status[line_id][col_id] <<= 1;
   if (key_buffer[line_id][col_id] == KEY_KEEP_PRESSED) {
-    key_status[line_id][col_id] = KEY_PRESSED;
+    key_status[line_id][col_id] |= KEY_PRESSED;
   } else if (key_buffer[line_id][col_id] == KEY_KEEP_RELEASED) {
-    key_status[line_id][col_id] = KEY_RELEASED;
+    key_status[line_id][col_id] |= KEY_RELEASED;
   }
+  key_status[line_id][col_id] &= OLD_STATE_MASK;
 }
 
 ///@}
