@@ -53,11 +53,6 @@ void show_in_array(unsigned char row_id, unsigned char image_code) {
  */
 void blink_bit_and_appear(int line_id, int col_id, unsigned char clock) {
   unsigned char added_code = ~(1 << col_id);
-  // if ((added_code | base_image[line_id]) != 0xFF) {
-  //   // added_code 要点亮的位为 0, base_image 对应数位如果是 0,
-  //   // 说明函数调用之前该位置已经点亮，函数不做任何操作
-  //   return;
-  // }
   switch (clock) {
     case 0xFF:
     case 1:

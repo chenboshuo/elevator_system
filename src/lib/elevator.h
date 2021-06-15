@@ -89,10 +89,6 @@ void close_calls(struct Elevator* elevator) {
  * @param elevator 电梯
  */
 void arrive(struct Elevator* elevator) {
-  // 换算运行方向
-  // unsigned char calling_direction =
-  //     (elevator->direction == UP) ? UP_CALL : DOWN_CALL;
-
   // 到达新楼层
   elevator->current_floor = elevator->current_floor + elevator->direction;
 
@@ -129,9 +125,6 @@ void show_direction(struct Elevator* elevator) {
  * @param elevator 电梯
  */
 void get_direction(struct Elevator* elevator) {
-  // 换算运行方向
-  // unsigned char calling_direction =
-  //     (elevator->direction == UP) ? UP_CALL : DOWN_CALL;
   unsigned char target_floor;
   // 没有运行方向则选择运行方向
   if (elevator->direction == NO_DIRECTION) {

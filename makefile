@@ -41,6 +41,11 @@ main:
 	make --directory=src main.out
 
 
+test_key:
+	make --directory=src/tests test_key.out
+
+test_array:
+	make --directory=src/tests test_array.out
 
 ## make clean: clean the temp files
 clean:

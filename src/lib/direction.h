@@ -42,13 +42,7 @@ static unsigned char code ARROW_SYMBOL[] = {
 void move_up(unsigned char begin_bit_loc) {
   unsigned char i;
   unsigned char clean_mask = get_clean_mask(begin_bit_loc);
-  // if (begin_bit_loc == LEFT_SYMBOL) {
-  //   clean_mask = 0x0F;  // 将图片放在左边需要清除左边部分(低位)
-  // } else {
-  //   clean_mask = 0xF0;
-  // }
 
-  // ALLOW_INTERRUPT = FALSE;  // 关键步骤，禁止中断
   for (i = 0; i < ARROW_LINE_SIZE; ++i) {
     base_image[i + 3] |= clean_mask;
     base_image[i + 3] &=
@@ -58,7 +52,6 @@ void move_up(unsigned char begin_bit_loc) {
         | ~clean_mask        // 去掉另外半部分
         ;
   }
-  // ALLOW_INTERRUPT = TRUE;  // 恢复中断
 }
 
 /**
@@ -68,13 +61,6 @@ void move_up(unsigned char begin_bit_loc) {
 void move_dowm(unsigned char begin_bit_loc) {
   unsigned char i;
   unsigned char clean_mask = get_clean_mask(begin_bit_loc);
-
-  // unsigned char clean_mask;
-  // if (begin_bit_loc == LEFT_SYMBOL) {
-  //   clean_mask = 0x0F;  // 将图片放在左边需要清除左边部分(低位)
-  // } else {
-  //   clean_mask = 0xF0;
-  // }
 
   // ALLOW_INTERRUPT = FALSE;  // 关键步骤，禁止中断
   for (i = 0; i < ARROW_LINE_SIZE; ++i) {

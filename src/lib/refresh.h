@@ -130,7 +130,8 @@ void refresh_left_elevator() {
     // break;
     case 1500:
       arrive(&left_elevator);
-    default:
+      break;
+    case 1:
       get_direction(&left_elevator);
   }
   ++left_clock;
