@@ -21,6 +21,11 @@
   (has_requested[elevator_id][0] || has_requested[elevator_id][1] || \
    has_requested[elevator_id][2])
 
+/// 判断是否有该方向的楼层请求
+#define has_any_calls(direction)                           \
+  (has_called[direction][0] || has_called[direction][1] || \
+   has_called[direction][2])
+
 /// 电梯内的请求
 unsigned char has_requested[2][3] = {{FALSE, FALSE, FALSE},
                                      {FALSE, FALSE, FALSE}};

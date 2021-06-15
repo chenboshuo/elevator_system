@@ -7,8 +7,7 @@
 #define REFRESH_H
 
 #include "alias.h"
-#include "direction.h"
-#include "elevator.h"
+#include "dispatch_system.h"
 #include "key.h"
 #include "led_array.h"
 #include "requests.h"

@@ -22,6 +22,10 @@
 #define NO_DIRECTION 0  //!< 静止记为 0
 #define DOWN -1         //!< 下行记为 -1
 
+/// 将电梯运行方向(1,-1)换算成请求方向(0,1)
+#define get_calling_direction(elevator_direction) \
+  ((elevator_direction == UP) ? UP_CALL : DOWN_CALL)
+
 /// 根据起始的位的位置计算清除数据的掩码
 #define get_clean_mask(begin_bit_loc) \
   ((begin_bit_loc == LEFT_SYMBOL) ? 0x0F : 0xF0)
