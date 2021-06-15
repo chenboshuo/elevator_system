@@ -22,6 +22,10 @@
 #define NO_DIRECTION 0  /// 静止记为 0
 #define DOWN -1         /// 下行记为 -1
 
+/// 根据起始的位的位置计算清除数据的掩码
+#define get_clean_mask(begin_bit_loc) \
+  ((begin_bit_loc == LEFT_SYMBOL) ? 0x0F : 0xF0)
+
 /// 上下箭头
 static unsigned char code ARROW_SYMBOL[] = {
     0x5b,  // ..#..#.#
@@ -37,14 +41,14 @@ static unsigned char code ARROW_SYMBOL[] = {
  */
 void move_up(unsigned char begin_bit_loc) {
   unsigned char i;
-  unsigned char clean_mask;
-  if (begin_bit_loc == LEFT_SYMBOL) {
-    clean_mask = 0x0F;  // 将图片放在左边需要清除左边部分(低位)
-  } else {
-    clean_mask = 0xF0;
-  }
+  unsigned char clean_mask = get_clean_mask(begin_bit_loc);
+  // if (begin_bit_loc == LEFT_SYMBOL) {
+  //   clean_mask = 0x0F;  // 将图片放在左边需要清除左边部分(低位)
+  // } else {
+  //   clean_mask = 0xF0;
+  // }
 
-  ALLOW_INTERRUPT = FALSE;  // 关键步骤，禁止中断
+  // ALLOW_INTERRUPT = FALSE;  // 关键步骤，禁止中断
   for (i = 0; i < ARROW_LINE_SIZE; ++i) {
     base_image[i + 3] |= clean_mask;
     base_image[i + 3] &=
@@ -54,7 +58,7 @@ void move_up(unsigned char begin_bit_loc) {
         | ~clean_mask        // 去掉另外半部分
         ;
   }
-  ALLOW_INTERRUPT = TRUE;  // 恢复中断
+  // ALLOW_INTERRUPT = TRUE;  // 恢复中断
 }
 
 /**
@@ -63,14 +67,16 @@ void move_up(unsigned char begin_bit_loc) {
  */
 void move_dowm(unsigned char begin_bit_loc) {
   unsigned char i;
-  unsigned char clean_mask;
-  if (begin_bit_loc == LEFT_SYMBOL) {
-    clean_mask = 0x0F;  // 将图片放在左边需要清除左边部分(低位)
-  } else {
-    clean_mask = 0xF0;
-  }
+  unsigned char clean_mask = get_clean_mask(begin_bit_loc);
 
-  ALLOW_INTERRUPT = FALSE;  // 关键步骤，禁止中断
+  // unsigned char clean_mask;
+  // if (begin_bit_loc == LEFT_SYMBOL) {
+  //   clean_mask = 0x0F;  // 将图片放在左边需要清除左边部分(低位)
+  // } else {
+  //   clean_mask = 0xF0;
+  // }
+
+  // ALLOW_INTERRUPT = FALSE;  // 关键步骤，禁止中断
   for (i = 0; i < ARROW_LINE_SIZE; ++i) {
     base_image[i + 3] |= clean_mask;
     base_image[i + 3] &=
@@ -80,7 +86,15 @@ void move_dowm(unsigned char begin_bit_loc) {
           << begin_bit_loc)     // 移动到对应位置
          | ~clean_mask);        // 去掉另外半部分
   }
-  ALLOW_INTERRUPT = TRUE;  // 恢复中断
+  // ALLOW_INTERRUPT = TRUE;  // 恢复中断
+}
+
+void clear_direction_lamp(unsigned char begin_bit_loc) {
+  unsigned char i;
+  unsigned char clean_mask = get_clean_mask(begin_bit_loc);
+  for (i = 0; i < ARROW_LINE_SIZE; ++i) {
+    base_image[i + 3] |= clean_mask;
+  }
 }
 
 #endif

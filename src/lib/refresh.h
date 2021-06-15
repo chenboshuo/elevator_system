@@ -34,10 +34,10 @@ void refresh_module() {
       show_in_array(unit_turn, base_image[unit_turn]);
       break;
     case 9:
-      open_data_tube(0, DIGITS_LED[right_elevator.current_floor + 1]);
+      open_data_tube(5, DIGITS_LED[left_elevator.current_floor + 1]);
       break;
     case 10:
-      open_data_tube(5, DIGITS_LED[left_elevator.current_floor + 1]);
+      // open_data_tube(0, DIGITS_LED[right_elevator.current_floor + 1]);
       break;
   }
   ++unit_turn;
@@ -122,6 +122,32 @@ void refresh_key_line() {
   // 更新闪烁寄存器
   ++ms_count;
 }
+
+void refresh_left_elevator() {
+  static unsigned int left_clock = 0;
+  switch (left_clock) {
+    // case 0:
+    // break;
+    case 1500:
+      arrive(&left_elevator);
+    default:
+      get_direction(&left_elevator);
+  }
+  ++left_clock;
+  left_clock %= 2000;
+}
+
+// void refresh_right_elevator() {
+//   static unsigned int right_clock = 0;
+//   switch (right_clock) {
+//     case 0:
+//       get_direction(&right_elevator);
+//       break;
+//     case 0x0FFF:
+//       arrive(&right_elevator);
+//   }
+//   ++right_clock;
+// }
 
 ///@}
 

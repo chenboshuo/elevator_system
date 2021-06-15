@@ -18,6 +18,13 @@
 
 #define BLINK_PROCESSING_CLOCK 0xFF  /// 用于处理闪烁的时钟
 
+/**
+ * 让某一位直接消失
+ * @param line_id 行号
+ * @param col_id  列号
+ */
+#define bit_disappear(line_id, col_id) (base_image[line_id] |= (1 << (col_id)))
+
 /// 用来存储单片机的一些状态
 unsigned char base_image[] = {
     CLOSE_ALL, CLOSE_ALL, CLOSE_ALL, CLOSE_ALL,
@@ -68,7 +75,7 @@ void blink_bit_and_appear(int line_id, int col_id, unsigned char clock) {
  * @param clock   时钟，需要在其他函数做处理，访问函数一次右移一位
  */
 void blink_bit_and_disappear(int line_id, int col_id, unsigned char clock) {
-  int deleted_code = (1 << col_id);
+  unsigned char deleted_code = (1 << col_id);
   switch (clock) {
     case 0xFF:
     case 1:
