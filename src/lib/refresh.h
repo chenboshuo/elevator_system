@@ -14,7 +14,7 @@
 #include "requests.h"
 #include "seven-segment_display.h"
 
-#define FLASH_UNIT_SIZE 11  /// 要刷新的单元数目
+#define FLASH_UNIT_SIZE 11  //!< 要刷新的单元数目
 
 /**
  * 更新显示的模块

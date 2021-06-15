@@ -10,19 +10,19 @@
 
 #include "system_header.h"
 
-#define KEY_EVENT P2  /// P2 用于处理键盘事件
+#define KEY_EVENT P2  //!< P2 用于处理键盘事件
 
-#define OLD_STATE_MASK 0x03  /// 保留最后两位用来保存之前状态
+#define OLD_STATE_MASK 0x03  //!< 保留最后两位用来保存之前状态
 
-#define KEY_PRESSED 0          /// 表示按键被按下
-#define KEY_KEEP_PRESSED 0x00  /// 四次buffer记录都记录到按键按下
-#define NEWLY_PRESSED 0x02  /// (10) 表示前一个状态释放，后一个状态按下
+#define KEY_PRESSED 0          //!< 表示按键被按下
+#define KEY_KEEP_PRESSED 0x00  //!< 四次buffer记录都记录到按键按下
+#define NEWLY_PRESSED 0x02  //!< (10) 表示前一个状态释放，后一个状态按下
 
-#define KEY_RELEASED 1          /// 1 表示按键被释放
-#define KEY_KEEP_RELEASED 0x0F  /// buffer中记录到四次按键释放状态
+#define KEY_RELEASED 1          //!< 1 表示按键被释放
+#define KEY_KEEP_RELEASED 0x0F  //!< buffer中记录到四次按键释放状态
 
-#define KEY_LINE_SIZE 4  /// 按键共四行
-#define KEY_COL_SIZE 4   /// 按键共四列
+#define KEY_LINE_SIZE 4  //!< 按键共四行
+#define KEY_COL_SIZE 4   //!< 按键共四列
 
 /**
  * 键盘按键的缓存，记录按键之前的状态

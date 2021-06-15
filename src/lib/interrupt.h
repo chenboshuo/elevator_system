@@ -1,6 +1,7 @@
 /** @file
  * 针对不同操作系统的头文件和代码风格调整
  * @defgroup 计数器控制器与中断
+ * @{
  */
 
 #ifndef INTERRUPT_H
@@ -16,6 +17,7 @@
 #define ALLOW_INTERRUPT EA      //!< EA 寄存器控制使能所有中断
 #define ALLOW_T0_INTERRUPT ET0  //!< 允许T0中断
 #define ENABLE_T0 TR0           //!< 启动T0的控制寄存器
+
 //!< 计时1ms 的计数器初值
 #define TIME_1MS() \
   TH0 = 0xFC;      \

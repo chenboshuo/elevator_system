@@ -10,17 +10,17 @@
 #include "interrupt.h"
 #include "led_array.h"
 
-#define ARROW_LINE_SIZE 5  /// 表示方向信息的行数是5
+#define ARROW_LINE_SIZE 5  //!< 表示方向信息的行数是5
 
-#define LEFT_SYMBOL 0   /// 0 表明将方向标识放到左半部分
-#define RIGHT_SYMBOL 4  /// 4 表明将方向标识放到右半部分
+#define LEFT_SYMBOL 0   //!< 0 表明将方向标识放到左半部分
+#define RIGHT_SYMBOL 4  //!< 4 表明将方向标识放到右半部分
 
-#define SELECT_LEFT_PART 0x0F   /// 选择ARROW_SYMBOL 的左半部分
-#define SELECT_RIGHT_PART 0xF0  /// 选择ARROW_SYMBOL 的左半部分
+#define SELECT_LEFT_PART 0x0F   //!< 选择ARROW_SYMBOL 的左半部分
+#define SELECT_RIGHT_PART 0xF0  //!< 选择ARROW_SYMBOL 的左半部分
 
-#define UP 1            /// 上行记为 1
-#define NO_DIRECTION 0  /// 静止记为 0
-#define DOWN -1         /// 下行记为 -1
+#define UP 1            //!< 上行记为 1
+#define NO_DIRECTION 0  //!< 静止记为 0
+#define DOWN -1         //!< 下行记为 -1
 
 /// 根据起始的位的位置计算清除数据的掩码
 #define get_clean_mask(begin_bit_loc) \

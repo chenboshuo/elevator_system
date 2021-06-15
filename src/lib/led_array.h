@@ -14,9 +14,9 @@
 #define ARRY_ROW_SIZE 8  //!< 该单片机共8行
 #define ARRY_COL_SIZE 8  //!< 该单片机共8列
 
-#define ARRAY_LINE_VALID_BITS 0x07  /// 范围0-7
+#define ARRAY_LINE_VALID_BITS 0x07  //!< 范围0-7
 
-#define BLINK_PROCESSING_CLOCK 0xFF  /// 用于处理闪烁的时钟
+#define BLINK_PROCESSING_CLOCK 0xFF  //!< 用于处理闪烁的时钟
 
 /**
  * 让某一位直接消失

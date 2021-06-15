@@ -12,8 +12,8 @@
 
 // #define NO_TARGET 0x00  /// NO_TARGET 表明没有楼层要访问
 
-#define LEFT_ELEVATOR 0   /// 0 代表左边机位
-#define RIGHT_ELEVATOR 1  /// 1 代表右边机位
+#define LEFT_ELEVATOR 0   //!< 0 代表左边机位
+#define RIGHT_ELEVATOR 1  //!< 1 代表右边机位
 
 /// 符号函数，计算(a-b)的符号
 #define sign(a, b) ((a - b == 0) ? 0 : ((a - b) > 0 ? 1 : -1))  // 计算a-b的符号
@@ -22,8 +22,7 @@
 #define get_calling_direction(elevator_direction) \
   ((elevator_direction == UP) ? UP_CALL : DOWN_CALL)
 
-/// 电梯实体对应数据结构
-/// 注意current_floor 0 代表一楼
+/// 电梯实体对应数据结构 注意current_floor 0 代表一楼
 struct Elevator {
   unsigned char current_floor;
   unsigned char id;

@@ -9,12 +9,12 @@
 
 #include "system_header.h"
 
-#define UP_CALL 0    /// 0 代表上行请求
-#define DOWN_CALL 1  /// 1 代表下行请求
+#define UP_CALL 0    //!< 0 代表上行请求
+#define DOWN_CALL 1  //!< 1 代表下行请求
 
-#define FIRST_FLOOR 0   /// 一楼信息放在索引 0 的位置
-#define SECOND_FLOOR 1  /// 2楼放在索引1 的位置
-#define THIRD_FLOOR 2   /// 3楼放在索引2 的位置
+#define FIRST_FLOOR 0   //!< 一楼信息放在索引 0 的位置
+#define SECOND_FLOOR 1  //!< 2楼放在索引1 的位置
+#define THIRD_FLOOR 2   //!< 3楼放在索引2 的位置
 
 /// 判断是否有电梯内请求
 #define has_any_requests(elevator_id)                                \
