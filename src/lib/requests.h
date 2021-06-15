@@ -22,9 +22,9 @@
    has_requested[elevator_id][2])
 
 /// 判断是否有该方向的楼层请求
-#define has_any_calls(direction)                           \
-  (has_called[direction][0] || has_called[direction][1] || \
-   has_called[direction][2])
+#define has_any_calls()                                                     \
+  (has_called[UP_CALL][FIRST_FLOOR] || has_called[UP_CALL][SECOND_FLOOR] || \
+   has_called[DOWN_CALL][SECOND_FLOOR] || has_called[DOWN_CALL][THIRD_FLOOR])
 
 /// 电梯内的请求
 unsigned char has_requested[2][3] = {{FALSE, FALSE, FALSE},

@@ -8,11 +8,14 @@
 
 #include "direction.h"
 #include "elevator.h"
+#include "light.h"  // debug only
 #include "requests.h"
 #include "system_header.h"
 
 /// 符号函数，计算(a-b)的符号
 #define sign(a, b) ((a - b == 0) ? 0 : ((a - b) > 0 ? 1 : -1))  // 计算a-b的符号
+
+#define UNDERFLOW 0xFF  //!< 楼层(unsigned char 类型)出范围，向下溢出时为0xFF
 
 /**
  * 关闭电梯外的呼叫请求，并关闭对应位置指示灯
@@ -40,6 +43,17 @@ void close_calls(struct Elevator* elevator) {
 }
 
 /**
+ * 关闭电梯内目标楼层请求
+ * @param elevator 电梯
+ */
+void close_requests(struct Elevator* elevator) {
+  has_requested[elevator->id][elevator->current_floor] = FALSE;
+  bit_disappear(2 - elevator->current_floor, elevator->id * 7);
+  key_clocks[elevator->id][elevator->current_floor] =
+      0;  // 清空按键计时，防止闪烁
+}
+
+/**
  * 处理电梯到达之后的程序
  * @param elevator 电梯
  */
@@ -52,13 +66,10 @@ void arrive(struct Elevator* elevator) {
 
   // 清除电梯内请求,关闭对应位置的灯
   // ALLOW_INTERRUPT = FALSE;
-  has_requested[elevator->id][elevator->current_floor] = FALSE;
-  bit_disappear(2 - elevator->current_floor, elevator->id * 7);
-  key_clocks[elevator->id][elevator->current_floor] =
-      0;  // 清空按键计时，防止闪烁
+  // close_requests(elevator);
 
   // 关闭电梯外呼叫请求
-  close_calls(elevator);
+  // close_calls(elevator);
 }
 
 /**
@@ -92,8 +103,22 @@ void get_direction(struct Elevator* elevator) {
         ;
       }
       // 找到之后计算方向
-      elevator->direction = sign(target_floor, elevator->current_floor);
-    } else if (has_any_calls(calling_direction)) {
+      // elevator->direction = sign(target_floor, elevator->current_floor);
+    } else if (has_any_calls()) {
+      // 寻找目标楼层
+      for (target_floor = FIRST_FLOOR; !has_called[UP_CALL][target_floor] &&
+                                       !has_called[DOWN_CALL][target_floor];
+           ++target_floor) {
+        ;
+      }
+      // 若目标就在当前楼层，关闭请求
+      if (target_floor == elevator->current_floor) {
+        elevator->direction = UP;
+        close_calls(elevator);
+        elevator->direction = DOWN;
+        close_calls(elevator);
+        elevator->direction = NO_DIRECTION;
+      }
     } else {  // 无任何请求，归位
       switch (elevator->id) {
         case LEFT_ELEVATOR:
@@ -103,20 +128,25 @@ void get_direction(struct Elevator* elevator) {
           target_floor = THIRD_FLOOR;
           break;
       }
-      elevator->direction = sign(target_floor, elevator->current_floor);
     }
+    elevator->direction = sign(target_floor, elevator->current_floor);
+
   } else {  // 方向不为空
     // 向运行方向寻找电梯内外请求
     for (target_floor = elevator->current_floor;
-         target_floor != 0xFF && target_floor < 3 &&
+         target_floor != UNDERFLOW && target_floor < 3 &&
          !has_requested[elevator->id][target_floor] &&
-         !has_called[get_calling_direction(elevator->direction)][target_floor];
+         !has_called[calling_direction][target_floor];
          target_floor += elevator->direction) {
       ;
     }
+    // if (target_floor == 0xFF) {
+    //   open_lights(0xEE);
+    // }
 
     // 若目标楼层出范围，说明没有请求，我们消除运行方向
-    if (target_floor == 0xFF || target_floor == 3) {
+    if (target_floor == UNDERFLOW || target_floor == 3) {
+      open_lights(0xEF);
       elevator->direction = NO_DIRECTION;
     }
   }

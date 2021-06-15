@@ -15,6 +15,9 @@
 
 #define FLASH_UNIT_SIZE 11  //!< 要刷新的单元数目
 
+#define ELEVATOR_START_TIMESTAMP 0  //!< 电梯启动的时间戳
+#define ELEVATOR_WAIT_TIME 1500     //!< 电梯进行楼层等待的时间段
+
 /**
  * 更新显示的模块
  * 将所有要显示的单元统一刷新
@@ -124,14 +127,13 @@ void refresh_key_line() {
 
 void refresh_left_elevator() {
   static unsigned int left_clock = 0;
-  switch (left_clock) {
-    // case 0:
-    // break;
-    case 1500:
-      arrive(&left_elevator);
-      break;
-    case 1:
-      get_direction(&left_elevator);
+  if (left_clock == ELEVATOR_START_TIMESTAMP) {  // 启动电梯
+    get_direction(&left_elevator);
+  } else if (left_clock == 1500) {  // 到达楼层
+    arrive(&left_elevator);
+  } else if (left_clock > 1500) {  // 在楼层等待
+    close_calls(&left_elevator);
+    close_requests(&left_elevator);
   }
   ++left_clock;
   left_clock %= 2000;
