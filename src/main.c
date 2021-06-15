@@ -21,8 +21,8 @@ void main() {
 
   while (TRUE) {
     // get direction
-    get_direction(&left_elevator);
-    get_direction(&right_elevator);
+    // get_direction(&left_elevator);
+    // get_direction(&right_elevator);
 
     // 移动
     move_clock = 255;

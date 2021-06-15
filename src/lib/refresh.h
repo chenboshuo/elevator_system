@@ -75,8 +75,7 @@ void refresh_key_line() {
         if (is_just_pressed(key_line, key_col) &&
             !has_requested[key_line][2 - key_col]) {
           key_clocks[key_line][key_col] = BLINK_PROCESSING_CLOCK;
-          has_requested[key_line][2 - key_col] =
-              TRUE;  // 将请求发送到对应的电梯
+          has_requested[key_line][key_col] = TRUE;  // 将请求发送到对应的电梯
         }
         blink_bit_and_appear(2 - key_col, key_line * 7,
                              key_clocks[key_line][key_col]);

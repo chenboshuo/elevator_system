@@ -65,11 +65,30 @@ void arrive(struct Elevator* elevator) {
   // 到达新楼层
   elevator->current_floor = elevator->current_floor + elevator->direction;
 
-  // 清除电梯内请求
+  // 清除电梯内请求,关闭对应位置的灯
+  ALLOW_INTERRUPT = FALSE;
   has_requested[elevator->id][elevator->current_floor] = FALSE;
+  bit_disappear(2 - elevator->current_floor, elevator->id * 7);
+  key_clocks[elevator->id][elevator->current_floor] =
+      0;  // 清空按键计时，防止闪烁
 
   // 关闭电梯外呼叫请求
   has_called[calling_direction][elevator->current_floor] = FALSE;
+  switch (elevator->current_floor) {
+    case FIRST_FLOOR:
+      bit_disappear(0, 2);
+      key_clocks[2][0] = 0;
+      break;
+    case SECOND_FLOOR:
+      bit_disappear(calling_direction, 3);
+      key_clocks[2 + calling_direction][1] = FALSE;
+      break;
+    case THIRD_FLOOR:
+      bit_disappear(1, 4);
+      key_clocks[2][2] = FALSE;
+      break;
+  }
+  ALLOW_INTERRUPT = TRUE;
   // has_called[(elevator->direction == UP) ? UP_CALL : DOWN_CALL]
   // [elevator->current_floor] = FALSE;
 }
