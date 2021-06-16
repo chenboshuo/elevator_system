@@ -105,12 +105,15 @@ void get_direction(struct Elevator* elevator) {
       // 找到之后计算方向
       // elevator->direction = sign(target_floor, elevator->current_floor);
     } else if (has_any_calls()) {
+      // 找同方向请求
+
       // 寻找目标楼层
       for (target_floor = FIRST_FLOOR; !has_called[UP_CALL][target_floor] &&
                                        !has_called[DOWN_CALL][target_floor];
            ++target_floor) {
         ;
       }
+
       // 若目标就在当前楼层，关闭请求
       if (target_floor == elevator->current_floor) {
         elevator->direction = UP;
@@ -133,10 +136,12 @@ void get_direction(struct Elevator* elevator) {
 
   } else {  // 方向不为空
     // 向运行方向寻找电梯内外请求
-    for (target_floor = elevator->current_floor;
+    for (target_floor = elevator->current_floor + elevator->direction;
          target_floor != UNDERFLOW && target_floor < 3 &&
          !has_requested[elevator->id][target_floor] &&
-         !has_called[calling_direction][target_floor];
+         !has_called[UP_CALL][target_floor] &&
+         !has_called[DOWN_CALL]
+                    [target_floor];  // TODO 逻辑不对，高楼层的反方向应该被满足
          target_floor += elevator->direction) {
       ;
     }
@@ -150,9 +155,6 @@ void get_direction(struct Elevator* elevator) {
       elevator->direction = NO_DIRECTION;
     }
   }
-
-  // 显示运行方向
-  show_direction(elevator);
 }
 
 ///@}

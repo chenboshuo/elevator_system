@@ -129,7 +129,8 @@ void refresh_left_elevator() {
   static unsigned int left_clock = 0;
   if (left_clock == ELEVATOR_START_TIMESTAMP) {  // 启动电梯
     get_direction(&left_elevator);
-  } else if (left_clock == 1500) {  // 到达楼层
+    show_direction(&left_elevator);  // 显示运行方向
+  } else if (left_clock == 1500) {   // 到达楼层
     arrive(&left_elevator);
   } else if (left_clock > 1500) {  // 在楼层等待
     close_calls(&left_elevator);
