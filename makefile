@@ -47,6 +47,9 @@ test_key:
 test_array:
 	make --directory=src/tests test_array.out
 
+test_door:
+	make --directory=src/tests test_door.out
+
 ## make clean: clean the temp files
 clean:
 	# git ls-files --others | xargs gio trash
