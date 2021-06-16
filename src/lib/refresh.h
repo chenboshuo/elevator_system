@@ -8,6 +8,7 @@
 
 #include "alias.h"
 #include "dispatch_system.h"
+#include "door.h"
 #include "key.h"
 #include "led_array.h"
 #include "requests.h"
@@ -39,6 +40,7 @@ void refresh_module() {
       open_data_tube(5, DIGITS_LED[left_elevator.current_floor + 1]);
       break;
     case 10:
+      open_lights(door_status);
       // open_data_tube(0, DIGITS_LED[right_elevator.current_floor + 1]);
       break;
   }

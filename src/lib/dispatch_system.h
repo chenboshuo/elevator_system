@@ -8,7 +8,6 @@
 
 #include "direction.h"
 #include "elevator.h"
-#include "light.h"  // debug only
 #include "requests.h"
 #include "system_header.h"
 
@@ -151,7 +150,6 @@ void get_direction(struct Elevator* elevator) {
 
     // 若目标楼层出范围，说明没有请求，我们消除运行方向
     if (target_floor == UNDERFLOW || target_floor == 3) {
-      open_lights(0xEF);
       elevator->direction = NO_DIRECTION;
     }
   }
