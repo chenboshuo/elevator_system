@@ -1,0 +1,70 @@
+\documentclass[../main.tex]{subfiles} % 需要pdf封面
+
+\begin{document}
+调度系统中需要决定运行方向，
+大致原理如%
+\cref{fig:direction}
+
+\begin{figure}[H]
+  \centering
+  \def\svgwidth{0.6\linewidth}
+  \input{figures/direction.pdf_tex}
+  \caption{方向系统的简单示意图}
+  \label{fig:direction}
+\end{figure}
+
+方向系统的算法如%
+\cref{alg:get_direction}
+
+\begin{algorithm}[H]
+  \caption{方向确定的算法}
+  \begin{codebox}
+    \Procname{get\_direction($f(t),d(t),R,C$)}
+      \li \If $d(t) = 0$: \Comment 当前无方向
+      \Then
+        \li \If $R \neq \emptyset $: \Comment 电梯内还有请求
+        \Then
+          \li $f(s) \gets f\left(\min \{s|f(s) \in R\} \right)$ \Comment 先来先服务 \label{ln:fifs}
+        % \End
+        \li \Else \If $C \neq \emptyset$: \Comment 电梯外有楼层呼叫请求
+        % \Then
+          \li $f(s) \gets
+            f \left(\min \{s|(f(s),D_{f(x)}) \in C\} \right)$ \Comment 先来先服务
+        % \End
+        \li \Else: \Comment 无请求就回到初始位置
+        % \Then
+          \li $f(s) \gets f(0)$
+        \End
+        \li $d(t) \gets \func{sign}(f(s)-f(t))$ \Comment 到目标差的符号为电梯新的运行方向
+        \li \Return $d(t)$
+      \End
+      \li\Else: \Comment $d(t) \neq 0$:
+      \Then
+        \li $R_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, f(s) \in R\}$
+          \Comment 同方向电梯内请求集合
+        \li $C_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, (f(s),D_{f(s)}) \in C\}$
+          \Comment 楼层在当前电梯运行方向的楼层呼叫集合
+        \li \If $R_{f(t)} = \emptyset$ \kw{and} $C_{f(t)} = \emptyset$: \Comment 该方向无法满足请求
+        \Then
+          \li \Return $0$ \Comment 清除方向
+        \li \Else:
+          \li \Return $d(t)$ \Comment 保持同方向
+        \End
+      \End
+  \end{codebox}
+  \label{alg:get_direction}
+\end{algorithm}
+具体实现的函数是直接修改电梯的信息，
+没有返回值，
+以便于更高效的控制。
+此外，第\ref{ln:fifs}行使用的原则是先来先服务，
+尽可能的防止长时间等待，
+但是在本系统的实现中，
+由于内存限制，
+直接寻找任意一层的请求，
+复杂调度系统中应该使用这一类数据结构和调度算法。
+
+
+
+
+\end{document}

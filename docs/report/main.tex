@@ -4,6 +4,8 @@
 \author{陈伯硕}
 \date{\today}
 
+\usepackage{todonotes}
+
 \usepackage{subfiles}
 \begin{document}
 \maketitle
@@ -14,16 +16,34 @@
 
 \section{设计要求及性能指标}
   \subsection{设计要求}
+    \subfile{sections/demand}
   \subsection{主要性能指标}
+    \subfile{sections/feature}
 
+\newpage
 \section{系统总体方案设计}
   \subsection{应用层:应用设计的总体逻辑}
     \subsubsection{主程序设计思想与流程}
       \subfile{sections/main_func}
+    \subsection{刷新显示的模块}
+
   % 核心代码思想
   \subsection{数据层:运行逻辑的数字化}
+    \subsubsection{请求系统}
+      \subfile{sections/requests}
+    \subsubsection{方向系统}
+      \subfile{sections/direction}
+    \subsubsection{调度算法}
+
 
   \subsection{物理层:对硬件的响应}
+    \subfile{sections/physical}
+    \subsubsection{数码点阵显示模块}
+      \subfile{sections/led_array}
+
+    \subsubsection{按键监听模块}
+      \subfile{sections/key_listen}
+
 
 \section{系统调试及实现}
   \subsection{按键功能调试}
@@ -31,7 +51,7 @@
   \subsection{点阵显示模块的测试}
     \subfile{sections/test_array}
 
-
+\newpage
 \section{设计总结}
   \subfile{sections/opinion}
 

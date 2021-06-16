@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="figure.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.91579686"
+     inkscape:cx="181.80888"
+     inkscape:cy="210.19945"
+     inkscape:window-width="1321"
+     inkscape:window-height="686"
+     inkscape:window-x="45"
+     inkscape:window-y="45"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264999"
+       id="rect31"
+       width="28.565363"
+       height="17.858076"
+       x="63.270184"
+       y="30.1325" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264999"
+       id="rect31-3"
+       width="28.565363"
+       height="17.858076"
+       x="19.822552"
+       y="30.1325" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264999"
+       id="rect31-3-6"
+       width="28.565363"
+       height="17.858076"
+       x="108.58095"
+       y="30.1325" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="26.314354"
+       y="35.367851"
+       id="text2974"><tspan
+         sodipodi:role="line"
+         id="tspan2972"
+         style="stroke-width:0.264583"
+         x="26.314354"
+         y="35.367851">下行方向</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="26.693821"
+       y="42.144234"
+       id="text4980"><tspan
+         sodipodi:role="line"
+         id="tspan4978"
+         style="stroke-width:0.264583"
+         x="26.693821"
+         y="42.144234">$-1$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="70.951469"
+       y="35.367851"
+       id="text7184"><tspan
+         sodipodi:role="line"
+         id="tspan7182"
+         style="stroke-width:0.264583"
+         x="70.951469"
+         y="35.367851">无方向</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="71.851768"
+       y="42.144234"
+       id="text8310"><tspan
+         sodipodi:role="line"
+         id="tspan8308"
+         style="stroke-width:0.264583"
+         x="71.851768"
+         y="42.144234">$0$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="117.8203"
+       y="35.367851"
+       id="text12780"><tspan
+         sodipodi:role="line"
+         id="tspan12778"
+         style="stroke-width:0.264583"
+         x="117.8203"
+         y="35.367851">上行方向</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="119.44115"
+       y="42.144234"
+       id="text13796"><tspan
+         sodipodi:role="line"
+         id="tspan13794"
+         style="stroke-width:0.264583"
+         x="119.44115"
+         y="42.144234">$1$</tspan></text>
+  </g>
+</svg>

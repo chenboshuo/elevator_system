@@ -24,7 +24,7 @@ void flash_and_update() interrupt T0_OVERFLOW {
 
   if (ms_count == 200) {
     ++blink_clock;
-    update_key_clocks();
+    update_key_clocks();  // 刷新每个按键时钟
     ms_count = 0;
   }
 

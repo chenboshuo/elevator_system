@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="direction.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2951323"
+     inkscape:cx="320.04451"
+     inkscape:cy="131.64678"
+     inkscape:window-width="1321"
+     inkscape:window-height="686"
+     inkscape:window-x="45"
+     inkscape:window-y="45"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker27463"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path27461" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path17245" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path17248" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path17248-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path17248-9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264999"
+       id="rect31"
+       width="28.565363"
+       height="17.858076"
+       x="63.270184"
+       y="30.1325" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264999"
+       id="rect31-3"
+       width="28.565363"
+       height="17.858076"
+       x="19.822552"
+       y="30.1325" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264999"
+       id="rect31-3-6"
+       width="28.565363"
+       height="17.858076"
+       x="108.58095"
+       y="30.1325" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="23.139351"
+       y="35.367851"
+       id="text2974"><tspan
+         sodipodi:role="line"
+         id="tspan2972"
+         style="stroke-width:0.264583"
+         x="23.139351"
+         y="35.367851">下行方向</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="26.693821"
+       y="42.144234"
+       id="text4980"><tspan
+         sodipodi:role="line"
+         id="tspan4978"
+         style="stroke-width:0.264583"
+         x="26.693821"
+         y="42.144234">$-1$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="68.834801"
+       y="35.367851"
+       id="text7184"><tspan
+         sodipodi:role="line"
+         id="tspan7182"
+         style="stroke-width:0.264583"
+         x="68.834801"
+         y="35.367851">无方向</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="71.851768"
+       y="42.144234"
+       id="text8310"><tspan
+         sodipodi:role="line"
+         id="tspan8308"
+         style="stroke-width:0.264583"
+         x="71.851768"
+         y="42.144234">$0$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="113.58698"
+       y="35.367851"
+       id="text12780"><tspan
+         sodipodi:role="line"
+         id="tspan12778"
+         style="stroke-width:0.264583"
+         x="113.58698"
+         y="35.367851">上行方向</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="119.44115"
+       y="42.144234"
+       id="text13796"><tspan
+         sodipodi:role="line"
+         id="tspan13794"
+         style="stroke-width:0.264583"
+         x="119.44115"
+         y="42.144234">$1$</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.253227;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 33.374091,30.006936 V 18.439235 h 38.744662 v 11.447736"
+       id="path17243" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.253227;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart)"
+       d="M 81.781652,30.105333 V 18.537632 h 38.744778 v 11.447736"
+       id="path17243-3" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="36.706841"
+       y="14.243161"
+       id="text19787"><tspan
+         sodipodi:role="line"
+         id="tspan19785"
+         style="stroke-width:0.264583"
+         x="36.706841"
+         y="14.243161">下行请求完成</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="86.521538"
+       y="14.592709"
+       id="text19787-5"><tspan
+         sodipodi:role="line"
+         id="tspan19785-6"
+         style="stroke-width:0.264583"
+         x="86.521538"
+         y="14.592709">上行请求完成</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 73.344261,48.366791 V 60.540063 H 32.846631 V 48.318544"
+       id="path24341" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:;marker-start:url(#marker27463)"
+       d="M 123.08609,48.229781 V 60.403053 H 82.588458 V 48.181534"
+       id="path24341-1" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="33.148117"
+       y="67.010727"
+       id="text30245"><tspan
+         sodipodi:role="line"
+         id="tspan30243"
+         style="stroke-width:0.264583"
+         x="33.148117"
+         y="67.010727">有低楼层目标请求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="84.138794"
+       y="67.249893"
+       id="text30245-2"><tspan
+         sodipodi:role="line"
+         id="tspan30243-7"
+         style="stroke-width:0.264583"
+         x="84.138794"
+         y="67.249893">有高楼层目标请求</tspan></text>
+  </g>
+</svg>

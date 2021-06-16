@@ -1,0 +1,71 @@
+\documentclass[../main.tex]{subfiles} % 需要pdf封面
+
+\begin{document}
+
+在课本\upcite{textbook}中提供的程序提供了一种键盘事件监听的解决方案，
+对于每一个按键
+不断监听按键状态的二进制数码
+$K(t) = (k_{t-3}\,  k_{t-2}\, k_{t-1} \,k_t)_2$
+其中$k_i = 1(i=t,t-1,t-2,t-3)$表示按键释放，
+$k_i = 0$表示按键按下。
+若$K(t) = (1111)_2$,
+即四个状态检测到按键释放，
+认为当前状态$S_{N(t)}=1$,
+即当前为释放状态；
+其中$N(t)$为$t$时刻之前状态成功更新的次数;
+若$K(t) = (0000)_2$
+即四次检测到按键按下，
+认为当前状态$S_{N(t)} = 0$，
+表示按键按下，
+其余情况视为抖动。
+
+课本程序存储中，
+每个按键需要保存$S_{N(t)},S_{N(t)-1}$两个状态，
+通过
+\cref{alg:textbook}
+判定按键按下事件。
+
+\begin{algorithm}[H]
+  \caption{课本给出的按键按下事件的判定}
+  \begin{codebox}
+    \Procname{is\_just\_pressed($S_{N(t)},S_{N(t)-1}$)}
+      \li \If $S_{N(t)} \neq S_{N(t)-1}$ \kw{and}
+        $S_{N(t)-1} \neq 0$ :
+      \Then
+        \li \Return \kw{True}
+      \li \Else
+        \li \Return \kw{False}
+      \End
+
+  \end{codebox}
+  \label{alg:textbook}
+\end{algorithm}
+
+在课本给出的算法中
+$S_{N(t)},S_{N(t)-1}$是两个位变量，
+申请数组时无法申请位数组\upcite{sdcc},
+实现时以字节为单位存储，
+为了节省空间，
+可以构造数码$S_t = (S_{N(t)-1}, S_{N(t)})_2$
+通过\cref{alg:imporove}
+判定按键事件，
+这样逻辑更为简单，
+给出说明之后逻辑也更直观，
+且该模块的空间占用大幅度减少，
+有利于程序运行。
+
+\begin{algorithm}[H]
+  \caption{优化后的按键事件判定}
+  \begin{codebox}
+    \Procname{is\_just\_pressed($S_t$)}
+      \li \If $S_t = (10)_2$ :
+      \Then
+        \li \Return \kw{True}
+      \li \Else:
+        \li \Return \kw{False}
+      \End
+  \end{codebox}
+  \label{alg:imporove}
+\end{algorithm}
+
+\end{document}

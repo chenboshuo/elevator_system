@@ -1,0 +1,54 @@
+\documentclass[../main.tex]{subfiles} % 需要pdf封面
+
+\begin{document}
+
+调度系统的核心是数据结构，
+用响应数据结构表示请求信息。
+接下来我们构造数据结构来表示请求
+
+设运行的方向集合$D = \{-1,0,1\}$,
+其中用$1$标记上行，
+$0$标记静止,
+$-1$标记下行，
+$d(t) \in D$为电梯在时刻$t$的运行方向。
+$f(t)$为电梯在$t$时刻的楼层。
+电梯内请求集合记录了目标楼层，
+记为
+\begin{equation}
+  R = \{f(s) | f(s) \text{为目标楼层},s \leq t \}
+  \label{eq:requests}
+\end{equation}
+使用(\ref{eq:requests})的数据结构定义，
+楼层请求$f(t)$到达，只需要
+$R \gets R \cup \{f(t)\}$
+
+电梯外的呼叫请求需要记录发送呼叫请求的楼层和预期运行方向，
+即呼叫请求集合
+\begin{equation}
+  C = \left\{ (f(s),D_{f(s)}) |
+  f(s) \text{为呼叫请求的来源楼层}, s \leq t,
+  D_{f(s)} \text{为请求方向的集合}, D_{f(s)} \subset \{-1,1\}
+  \right\}
+  \label{eq:call}
+\end{equation}
+使用(\ref{eq:requests}),(\ref{eq:call})的数据结构定义，
+对$N$层楼的电梯系统，
+初始状态时呼叫集合为$C=\{(i,D_i)|i=1,2,\dots,N,D_i = \emptyset\}$
+请求$f(t),d(t)$到达,
+只需要$D_{f(t)} \gets D_{f(t)} \cup \{d(t)\}$
+
+以上数据结构是集合，
+常用操作是并集和判断元素是否在目标集合中，
+所以集合我们用数组直接实现
+
+\begin{lstlisting}[language=c]
+/// 电梯内的请求
+unsigned char has_requested[2][3] = {{FALSE, FALSE, FALSE},
+                                     {FALSE, FALSE, FALSE}};
+
+/// 楼层请求
+unsigned char has_called[2][3] = {{FALSE, FALSE, FALSE}, {FALSE, FALSE, FALSE}};
+\end{lstlisting}
+
+
+\end{document}
