@@ -16,8 +16,20 @@
 
 #define FLASH_UNIT_SIZE 11  //!< 要刷新的单元数目
 
-#define ELEVATOR_START_TIMESTAMP 0  //!< 电梯启动的时间戳
-#define ELEVATOR_WAIT_TIME 1500     //!< 电梯进行楼层等待的时间段
+#define ELEVATOR_START_MOMENT 0           //!< 电梯启动的时间戳
+#define ELEVATOR_BEGIN_WAITING_TIME 1500  //!< 电梯进行楼层等待的时间段
+
+#define OPEN_MOMENT_1 1600  //!< 时钟为1600 进入开门第1阶段
+#define OPEN_MOMENT_2 1700  //!< 时钟为1700 进入开门第2阶段
+#define OPEN_MOMENT_3 1800  //!< 时钟为1800 进入开门第3阶段
+#define OPEN_MOMENT_4 1900  //!< 时钟为1900 进入开门第4阶段
+
+#define CLOSE_MOMENT_1 2500  //!< 时钟2500 进入关门第1阶段
+#define CLOSE_MOMENT_2 2600  //!< 时钟2500 进入关门第2阶段
+#define CLOSE_MOMENT_3 2700  //!< 时钟2500 进入关门第3阶段
+#define CLOSE_MOMENT_4 2800  //!< 时钟2500 进入关门第4阶段
+
+#define READY_MOMENT 2900  //!< 时钟2900 时关闭所有时钟准备运行
 
 /**
  * 更新显示的模块
@@ -129,17 +141,38 @@ void refresh_key_line() {
 
 void refresh_left_elevator() {
   static unsigned int left_clock = 0;
-  if (left_clock == ELEVATOR_START_TIMESTAMP) {  // 启动电梯
+  static __bit need_responce = FALSE;
+  if (left_clock == ELEVATOR_START_MOMENT) {  // 启动电梯
     get_direction(&left_elevator);
-    show_direction(&left_elevator);  // 显示运行方向
-  } else if (left_clock == 1500) {   // 到达楼层
+    show_direction(&left_elevator);                        // 显示运行方向
+  } else if (left_clock == ELEVATOR_BEGIN_WAITING_TIME) {  // 到达楼层
     arrive(&left_elevator);
-  } else if (left_clock > 1500) {  // 在楼层等待
-    close_calls(&left_elevator);
-    close_requests(&left_elevator);
+  } else if (left_clock > ELEVATOR_BEGIN_WAITING_TIME) {  // 在楼层等待
+    need_responce |= close_calls(&left_elevator);
+    need_responce |= close_requests(&left_elevator);
+    if (need_responce) {
+      switch (left_clock) {
+        case OPEN_MOMENT_1:
+        case OPEN_MOMENT_2:
+        case OPEN_MOMENT_3:
+        case OPEN_MOMENT_4:
+          open_door(4);
+          break;
+        case CLOSE_MOMENT_1:
+        case CLOSE_MOMENT_2:
+        case CLOSE_MOMENT_3:
+        case CLOSE_MOMENT_4:
+          close_door(4);
+          break;
+        case READY_MOMENT:
+          need_responce = FALSE;
+      }
+    } else {
+      left_clock = ELEVATOR_START_MOMENT - 1;
+    }
   }
   ++left_clock;
-  left_clock %= 2000;
+  left_clock %= 3000;
 }
 
 // void refresh_right_elevator() {

@@ -19,10 +19,13 @@
 /**
  * 关闭电梯外的呼叫请求，并关闭对应位置指示灯
  * @param elevator 电梯
+ * @return 是否关闭了呼叫请求
  */
-void close_calls(struct Elevator* elevator) {
+__bit close_calls(struct Elevator* elevator) {
   unsigned char calling_direction =
       (elevator->direction == UP) ? UP_CALL : DOWN_CALL;
+  __bit has_closed_calls =
+      has_called[calling_direction][elevator->current_floor];
 
   has_called[calling_direction][elevator->current_floor] = FALSE;
   switch (elevator->current_floor) {
@@ -39,17 +42,23 @@ void close_calls(struct Elevator* elevator) {
       key_clocks[2][2] = FALSE;
       break;
   }
+  return has_closed_calls;
 }
 
 /**
  * 关闭电梯内目标楼层请求
  * @param elevator 电梯
+ * @return 是否关闭了请求
  */
-void close_requests(struct Elevator* elevator) {
+__bit close_requests(struct Elevator* elevator) {
+  __bit has_closed_request =
+      has_requested[elevator->id][elevator->current_floor];
   has_requested[elevator->id][elevator->current_floor] = FALSE;
   bit_disappear(2 - elevator->current_floor, elevator->id * 7);
   key_clocks[elevator->id][elevator->current_floor] =
       0;  // 清空按键计时，防止闪烁
+
+  return has_closed_request;
 }
 
 /**
