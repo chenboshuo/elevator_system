@@ -71,13 +71,6 @@ void arrive(struct Elevator* elevator) {
 
   // 关闭方向标识静止
   clear_direction_lamp(elevator->direction_lamp_loc);
-
-  // 清除电梯内请求,关闭对应位置的灯
-  // ALLOW_INTERRUPT = FALSE;
-  // close_requests(elevator);
-
-  // 关闭电梯外呼叫请求
-  // close_calls(elevator);
 }
 
 /**

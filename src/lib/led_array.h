@@ -25,6 +25,13 @@
  */
 #define bit_disappear(line_id, col_id) (base_image[line_id] |= (1 << (col_id)))
 
+/**
+ * 让某一位直接出现
+ * @param line_id 行号
+ * @param col_id  列号
+ */
+#define bit_appear(line_id, col_id) (base_image[line_id] &= ~(1 << col_id))
+
 /// 用来存储单片机的一些状态
 unsigned char base_image[] = {
     CLOSE_ALL, CLOSE_ALL, CLOSE_ALL, CLOSE_ALL,

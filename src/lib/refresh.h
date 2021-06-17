@@ -19,17 +19,8 @@
 #define ELEVATOR_START_MOMENT 0           //!< 电梯启动的时间戳
 #define ELEVATOR_BEGIN_WAITING_TIME 1500  //!< 电梯进行楼层等待的时间段
 
-#define OPEN_MOMENT_1 1600  //!< 时钟为1600 进入开门第1阶段
-#define OPEN_MOMENT_2 1700  //!< 时钟为1700 进入开门第2阶段
-#define OPEN_MOMENT_3 1800  //!< 时钟为1800 进入开门第3阶段
-#define OPEN_MOMENT_4 1900  //!< 时钟为1900 进入开门第4阶段
-
-#define CLOSE_MOMENT_1 2500  //!< 时钟2500 进入关门第1阶段
-#define CLOSE_MOMENT_2 2600  //!< 时钟2500 进入关门第2阶段
-#define CLOSE_MOMENT_3 2700  //!< 时钟2500 进入关门第3阶段
-#define CLOSE_MOMENT_4 2800  //!< 时钟2500 进入关门第4阶段
-
-#define READY_MOMENT 2900  //!< 时钟2900 时关闭所有时钟准备运行
+#define LEFT_CLOCK_SIZE 6000         //!< 定义左边电梯时钟大小
+static unsigned int left_clock = 0;  //!< 左电梯的时钟
 
 /**
  * 更新显示的模块
@@ -85,8 +76,19 @@ void refresh_key_line() {
 
   // 刷新键盘并响应
   switch (key_line) {
-    case 0:  // 第一行按键作为左边电梯内目标楼层的标识
     case 1:  // 第二行按键作为左边电梯内目标楼层的标识
+      if (is_just_pressed(1, 3)) {  // 一行三列作为开门键
+        if (left_clock > ELEVATOR_BEGIN_WAITING_TIME &&
+            left_clock < READY_MOMENT) {  // 电梯处于等待运行状态,响应打开
+          bit_appear(2, 1);
+          left_clock = OPEN_MOMENT_1;
+        }
+      } else if (is_just_released(1, 3)) {
+        bit_disappear(2, 1);
+      }
+
+    // 注意以上是额外判断，没有break，第二行前半部分也是楼层响应
+    case 0:  // 第一行按键作为左边电梯内目标楼层的标识
       for (key_col = 0; key_col < 3; ++key_col) {
         if (is_just_pressed(key_line, key_col) &&
             !has_requested[key_line][2 - key_col]) {
@@ -128,6 +130,16 @@ void refresh_key_line() {
         has_called[DOWN_CALL][SECOND_FLOOR] = TRUE;
       }
       blink_bit_and_appear(1, 3, key_clocks[3][0]);
+
+      // 响应关门请求，三行三列表示关门
+      if (is_just_pressed(3, 3)) {
+        bit_appear(2, 2);
+        if (left_clock > OPEN_MOMENT_4 && left_clock <= READY_TO_CLOSE_MOMENT) {
+          left_clock = READY_TO_CLOSE_MOMENT;
+        }
+      } else if (is_just_released(3, 3)) {
+        bit_disappear(2, 2);
+      }
   }
 
   // 更新linster
@@ -140,7 +152,6 @@ void refresh_key_line() {
 }
 
 void refresh_left_elevator() {
-  static unsigned int left_clock = 0;
   static __bit need_responce = FALSE;
   if (left_clock == ELEVATOR_START_MOMENT) {  // 启动电梯
     get_direction(&left_elevator);
@@ -172,7 +183,7 @@ void refresh_left_elevator() {
     }
   }
   ++left_clock;
-  left_clock %= 3000;
+  left_clock %= LEFT_CLOCK_SIZE;
 }
 
 // void refresh_right_elevator() {

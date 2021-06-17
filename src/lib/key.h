@@ -17,6 +17,7 @@
 #define KEY_PRESSED 0          //!< 表示按键被按下
 #define KEY_KEEP_PRESSED 0x00  //!< 四次buffer记录都记录到按键按下
 #define NEWLY_PRESSED 0x02  //!< (10) 表示前一个状态释放，后一个状态按下
+#define NEWLY_RELEASED 0x01  //!< (01) 表示前一个状态按下，后一个状态释放
 
 #define KEY_RELEASED 1          //!< 1 表示按键被释放
 #define KEY_KEEP_RELEASED 0x0F  //!< buffer中记录到四次按键释放状态
@@ -90,6 +91,16 @@ void update_key_buffer(unsigned char line_id, unsigned char col_id) {
  */
 unsigned char is_just_pressed(unsigned char line_id, unsigned char col_id) {
   return (key_status[line_id][col_id] == NEWLY_PRESSED);
+}
+
+/**
+ * 检测按键是否刚刚释放
+ * @param  line_id 行号
+ * @param  col_id  列号
+ * @return         刚释放为1否则为0
+ */
+unsigned char is_just_released(unsigned char line_id, unsigned char col_id) {
+  return (key_status[line_id][col_id] == NEWLY_RELEASED);
 }
 
 /**
