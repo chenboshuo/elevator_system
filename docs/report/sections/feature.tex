@@ -15,12 +15,26 @@
 % on-chip crystal oscillator,and a one-time enabled Watchdog Timer.
 \subsubsection{STC89系列芯片}
 
-STC89系列是8位单片机，
-有$\SI{64}{KiB}$flash 存储空间，
-$\SI{512}{B}$或$\SI{1080}{B}$的RAM存储空间，
-此外该系列有额外的I/O端口$P_4$,
-时钟$T_2$,
-4个优先级的中断系统
+  STC89系列是8位单片机，
+  有$\SI{64}{KiB}$flash 存储空间，
+  $\SI{512}{B}$或$\SI{1080}{B}$的RAM存储空间，
+  此外该系列有额外的I/O端口$P_4$,
+  时钟$T_2$,
+  4个优先级的中断系统
+
+\subsubsection{开发版部件}
+  该开发版不见示意图如
+  % \cref{fig:board}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{board}
+    %\missingfigure{board}
+    \caption{开发版资源示意图\upcite{files}}
+    \label{fig:board}
+  \end{figure}
+  本项目主要使用$4 \times 4$矩阵按键，7段数码管，
+  点阵LED，反光二极管作为相关功能的实现和展示
+
 
 
 \end{document}
