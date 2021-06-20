@@ -30,6 +30,10 @@ doxygen_pdf: doxygen
 main_report:
 	make --directory=./docs/report main
 
+## make qucik_report: make the report part qucikly
+quick_report:
+	make --directory=./docs/report quick
+
 ## make report: combined report of the project
 report: main_report doxygen_pdf
 	pdftk docs/report/build/main.pdf \

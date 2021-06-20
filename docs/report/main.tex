@@ -15,34 +15,44 @@
 \newpage
 
 \section{设计要求及性能指标}
+  \subsection{问题背景}
+    \subfile{sections/introduction}
   \subsection{设计要求}
     \subfile{sections/demand}
   \subsection{主要性能指标}
     \subfile{sections/feature}
 
-\newpage
+\section{符号说明}
+  \subfile{sections/symbol}
+
+% \newpage
 \section{系统总体方案设计}
   \subsection{应用层:应用设计的总体逻辑}
     \subsubsection{主程序设计思想与流程}
       \subfile{sections/main_func}
-    \subsection{刷新显示的模块}
+    \subsubsection{请求系统功能}
+      \subfile{sections/requests_func}
+    \subsubsection{显示系统功能}
+      \subfile{sections/display_func}
 
   % 核心代码思想
   \subsection{数据层:运行逻辑的数字化}
-    \subsubsection{请求系统}
+    \subsubsection{请求对应的数据结构}
       \subfile{sections/requests}
-    \subsubsection{方向系统}
+    \subsubsection{开关门控制系统}
+      \subfile{sections/door}
+    \subsubsection{方向系统与调度算法}
       \subfile{sections/direction}
-    \subsubsection{调度算法}
 
 
   \subsection{物理层:对硬件的响应}
     \subfile{sections/physical}
-    \subsubsection{数码点阵显示模块}
-      \subfile{sections/led_array}
-
     \subsubsection{按键监听模块}
       \subfile{sections/key_listen}
+
+    \subsubsection{闪烁显示}
+      \subfile{sections/led_array}
+
 
 
 \section{系统调试及实现}
@@ -50,6 +60,9 @@
     \subfile{sections/test_key}
   \subsection{点阵显示模块的测试}
     \subfile{sections/test_array}
+  \subsection{开关门的测试}
+    \subfile{sections/test_door}
+
 
 \newpage
 \section{设计总结}

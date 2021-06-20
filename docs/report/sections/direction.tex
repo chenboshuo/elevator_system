@@ -43,7 +43,7 @@
         \li $R_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, f(s) \in R\}$
           \Comment 同方向电梯内请求集合
         \li $C_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, (f(s),D_{f(s)}) \in C\}$
-          \Comment 楼层在当前电梯运行方向的楼层呼叫集合
+          \zi \> \Comment 楼层在当前电梯运行方向的楼层呼叫集合
         \li \If $R_{f(t)} = \emptyset$ \kw{and} $C_{f(t)} = \emptyset$: \Comment 该方向无法满足请求
         \Then
           \li \Return $0$ \Comment 清除方向

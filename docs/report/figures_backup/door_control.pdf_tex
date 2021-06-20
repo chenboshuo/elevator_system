@@ -1,0 +1,77 @@
+%% Creator: Inkscape 1.1 (1:1.1+202105261517+ce6663b3b7), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'door_control.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{524.13310949bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.16383246)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{door_control.pdf}}%
+    \put(0.97252151,0.04580562){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$T$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{door_control.pdf}}%
+    \put(0.02228728,0.0035997){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_a$\end{tabular}}}}%
+    \put(0.1040446,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{o_1}$\end{tabular}}}}%
+    \put(0.15812715,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{o_2}$\end{tabular}}}}%
+    \put(0.21220971,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{o_3}$\end{tabular}}}}%
+    \put(0.26629226,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{o_4}$\end{tabular}}}}%
+    \put(0.67191145,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{c_1}$\end{tabular}}}}%
+    \put(0.725994,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{c_2}$\end{tabular}}}}%
+    \put(0.78007647,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{c_3}$\end{tabular}}}}%
+    \put(0.83415902,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{c_4}$\end{tabular}}}}%
+    \put(0.53670506,0.00939801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_{w}$\end{tabular}}}}%
+    \put(0.03544115,0.08359047){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}到达\end{tabular}}}}%
+    \put(0.15790589,0.08354468){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}开门\end{tabular}}}}%
+    \put(0.34717958,0.08348363){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}载客等待\end{tabular}}}}%
+    \put(0.54734605,0.08348363){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}最小等待\end{tabular}}}}%
+    \put(0.70798021,0.08354468){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}关门\end{tabular}}}}%
+    \put(0.84499856,0.08351415){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}启动\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{door_control.pdf}}%
+  \end{picture}%
+\endgroup%

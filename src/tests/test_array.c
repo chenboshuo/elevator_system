@@ -13,7 +13,7 @@ void main() {
   TIME_1MS();
 
   while (TRUE) {
-    move_dowm(RIGHT_SYMBOL);
+    ;
   }
 }
 

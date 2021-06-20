@@ -1,0 +1,88 @@
+%% Creator: Inkscape 1.1 (1:1.1+202105261517+ce6663b3b7), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'key_listen.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{659.37540613bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.65279008)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{key_listen.pdf}}%
+    \put(0.88480325,0.59028441){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_t = 1$ 按键释放\end{tabular}}}}%
+    \put(0.88942983,0.50132823){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_t = 0$ 按键按下\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{key_listen.pdf}}%
+    \put(0.10967415,0.42490781){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1\,1\,1\,1$\end{tabular}}}}%
+    \put(-0.00100711,0.37370959){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S_{N(t)-2}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{key_listen.pdf}}%
+    \put(0.12550988,0.36708886){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{key_listen.pdf}}%
+    \put(0.28508899,0.42464723){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1\,1\,1\,1$\end{tabular}}}}%
+    \put(0.22900477,0.34160066){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S_{N(t)-1}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{key_listen.pdf}}%
+    \put(0.30092472,0.36682827){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.31514065,0.08050656){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{key_listen.pdf}}%
+    \put(0.37608428,0.42464719){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0\,0\,0\,0$\end{tabular}}}}%
+    \put(0.41327022,0.33705086){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S_{N(t)}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{key_listen.pdf}}%
+    \put(0.39192003,0.36682824){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{key_listen.pdf}}%
+    \put(0.19135488,0.42490781){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1\,0\,0\,1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{key_listen.pdf}}%
+    \put(0.11875753,0.00227185){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}视为噪声，无效丢弃\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{key_listen.pdf}}%
+    \put(0.42692312,0.64357205){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{key_listen.pdf}}%
+    \put(0.5480451,0.24063103){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}课本程序逻辑 \\$S_{N(t)-1} = 1 \land S_{N(t)} = 0 \iff t$时刻键盘按下\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{key_listen.pdf}}%
+    \put(0.3905051,0.08085442){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{key_listen.pdf}}%
+    \put(0.46530792,0.08418991){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}构造$S_t$\\               $S_t = (10)_2 \iff t$时刻按键按下\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -1,6 +1,7 @@
 [submodule "docs/doxygen-awesome-css"]
 	path = docs/doxygen-awesome-css
 	url = https://github.com/jothepro/doxygen-awesome-css.git
+	branch = main 
 [submodule "docs/myreport_template"]
 	path = docs/myreport_template
 	url = https://github.com/chenboshuo/myreport_template

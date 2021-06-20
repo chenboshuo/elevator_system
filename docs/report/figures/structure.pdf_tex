@@ -1,0 +1,95 @@
+%% Creator: Inkscape 1.1 (1:1.1+202105261517+ce6663b3b7), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'structure.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{524.99998558bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.84260579)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{structure.pdf}}%
+    \put(0.03559571,0.73598629){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}应用层\end{tabular}}}}%
+    \put(0.20857121,0.72985145){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}请求系统\end{tabular}}}}%
+    \put(0.88285759,0.72985145){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}显示系统\end{tabular}}}}%
+    \put(0.54571407,0.64413712){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}调度系统\end{tabular}}}}%
+    \put(0.37439701,0.56413696){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯方向判定算法\end{tabular}}}}%
+    \put(0.6454909,0.56413696){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}开关门控制算法\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{structure.pdf}}%
+    \put(0.38571428,0.37101556){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}运行方向\end{tabular}}}}%
+    \put(0.38571428,0.22775285){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}方向显示\end{tabular}}}}%
+    \put(0.52652293,0.41675963){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯\end{tabular}}}}%
+    \put(0.50938014,0.22778325){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}楼层显示\end{tabular}}}}%
+    \put(0.67175605,0.37100031){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}门状态\end{tabular}}}}%
+    \put(0.67175605,0.2277376){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}门状态显示\end{tabular}}}}%
+    \put(0.21428573,0.41677487){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}请求\end{tabular}}}}%
+    \put(0.13290547,0.30413637){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}按键监听\end{tabular}}}}%
+    \put(0.13290547,0.2277376){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}按键显示\end{tabular}}}}%
+    \put(0.24714288,0.22779849){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}请求显示\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{structure.pdf}}%
+    \put(0.67184528,0.17270858){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}LED灯控制\end{tabular}}}}%
+    \put(0.48355683,0.17372911){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}七段数码管控制\end{tabular}}}}%
+    \put(0.25000001,0.17270858){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}LED 点阵控制\end{tabular}}}}%
+    \put(0.1195632,0.56789509){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}算法\end{tabular}}}}%
+    \put(0.07950636,0.41675963){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}数据结构\end{tabular}}}}%
+    \put(0.03573286,0.30128001){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}物理层\end{tabular}}}}%
+    \put(0.03571429,0.48985163){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}逻辑层\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{structure.pdf}}%
+    \put(0.02857143,0.82985147){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}外部事件\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{structure.pdf}}%
+    \put(0.01428572,0.65842289){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}调\\用\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{structure.pdf}}%
+    \put(0.41670487,0.10274079){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}C 语言平台支持\end{tabular}}}}%
+    \put(0.01428572,0.42985144){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}数\\据\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{structure.pdf}}%
+    \put(0.01428572,0.00128){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}物理部件响应\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{structure.pdf}}%
+    \put(0.50714287,0.37270861){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}楼层\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{structure.pdf}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,139 @@
+\documentclass[../main.tex]{subfiles} % 需要pdf封面
+
+\begin{document}
+
+\glsxtrnewsymbol[
+	description={%
+		表示方向的集合 $\{-1,0,1\}$
+	},
+	unit={}
+]{direction}{\ensuremath{D}}
+
+\glsxtrnewsymbol[
+	description={%
+		电梯在时刻$t$的运行方向
+	},
+	unit={\si{(optional) unit}}
+]{dt}{\ensuremath{d(t)}}
+
+\glsxtrnewsymbol[
+	description={%
+		电梯在$t$时刻的楼层
+	},
+	unit={\si{(optional) unit}}
+]{ft}{\ensuremath{f(t)}}
+
+\glsxtrnewsymbol[
+	description={%
+		电梯内请求集合
+	},
+	unit={\si{(optional) unit}}
+]{requests}{\ensuremath{R}}
+
+\glsxtrnewsymbol[
+	description={%
+		电梯外的呼叫请求集合
+	},
+	unit={\si{(optional) unit}}
+]{calle}{\ensuremath{C}}
+
+\glsxtrnewsymbol[
+	description={%
+		$t$时刻请求$f(t)$楼层时该楼层的呼叫请求集合
+	},
+	unit={\si{(optional) unit}}
+]{dfs}{\ensuremath{D_{f(t)}}}
+
+\glsxtrnewsymbol[
+	description={%
+		在$t$时刻，
+		电梯在$f(t)$层,
+		方向为$d(t)$时可以满足的电梯内请求的集合
+	},
+	unit={\si{(optional) unit}}
+]{rft}{\ensuremath{R_{f(t)}}}
+
+\glsxtrnewsymbol[
+	description={%
+		在$t$时刻，
+		电梯在$f(t)$层,
+		方向为$d(t)$时可以满足的电梯外呼叫请求的集合
+	},
+	unit={\si{(optional) unit}}
+]{cft}{\ensuremath{C_{f(t)}}}
+
+% 电梯开关门控制模块
+\glsxtrnewsymbol[
+	description={%
+		电梯到达时刻
+	},
+	unit={\si{(optional) unit}}
+]{arrive}{\ensuremath{t_a}}
+
+\glsxtrnewsymbol[
+	description={%
+		电梯开门的第$i$个时刻
+	},
+	unit={\si{(optional) unit}}
+]{open}{\ensuremath{t_{o_i}}}
+
+\glsxtrnewsymbol[
+	description={%
+		完成载客等待，进入最小等待阶段的时刻
+	},
+	unit={\si{(optional) unit}}
+]{wait}{\ensuremath{t_w}}
+
+\glsxtrnewsymbol[
+	description={%
+		关门的第$i$个时刻
+	},
+	unit={\si{(optional) unit}}
+]{close}{\ensuremath{t_{c_i}}}
+
+\glsxtrnewsymbol[
+	description={%
+		电梯关门后准备运行完毕的时刻
+	},
+	unit={\si{(optional) unit}}
+]{ready}{\ensuremath{t_r}}
+
+% 按键模块
+
+\glsxtrnewsymbol[
+	description={%
+		表示按键状态的二进制数码，
+		$K(t)=(k_{t-3}\,  k_{t-2}\, k_{t-1} \,k_t)_2$
+		其中$k_i = 1(i=t,t-1,t-2,t-3)$表示按键释放
+	},
+	unit={\si{(optional) unit}}
+]{kt}{\ensuremath{K(t)}}
+
+\glsxtrnewsymbol[
+	description={%
+		$t$时刻之前按键状态成功更新的次数
+	},
+	unit={\si{(optional) unit}}
+]{nt}{\ensuremath{N(t)}}
+
+\glsxtrnewsymbol[
+	description={%
+		$t$时刻的按键状态，
+		上一个状态为$S_{N(t)-1}$
+	},
+	unit={\si{(optional) unit}}
+]{snt}{\ensuremath{S_{N(t)} = 0}}
+
+\glsxtrnewsymbol[
+	description={%
+		$S_t = (S_{N(t)-1}, S_{N(t)})_2$,
+		构造数码储存两个按键状态
+	},
+	unit={\si{(optional) unit}}
+]{st}{\ensuremath{S_t}}
+
+
+% 符号表
+\printunsrtglossary[type=symbols,style=symblong] % symbols without units
+
+\end{document}

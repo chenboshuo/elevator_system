@@ -13,15 +13,49 @@
     \Procname{main()}
       \li \While 电梯系统启动:
       \Then
-        \li 接受起点楼层请求
-        \li 接受电梯内目的楼层请求
-        \li 确定电梯运行方向
-        \li 电梯运行
+        \li 检查请求 \label{ln:requests}
+        \li 确定电梯运行方向 \label{ln:direction}
+          \Comment 方向分为"上行","下行"，"静止"
+        \li \If 电梯运行方向不为"静止"
+        \Then
+          \li 电梯运行到对应楼层
+        \End
+        \li \If 该楼层有请求:
+        \Then
+          \li 关闭请求
+          \li 开门 \label{ln:open_door}
+          \li 载客等待
+          \li 关门 \label{ln:close_door}
+        \End
       \End
   \end{codebox}
   \label{alg:main}
 \end{algorithm}
 
+接下来对这个大致的流程做具体分析
+第\ref{ln:requests}行需要系统检查系统，
+我们称为请求系统，
+它需要检查电梯内有无目标楼层请求和电梯外呼叫请求；
+第\ref{ln:direction}行需要一个判定移动方向的机制，
+我们称为方向判定系统，
+它属于调度系统的一部分，
+调度系统还应该包括第\ref{ln:open_door}到\ref{ln:close_door}
+使用的开关门控制系统，
+他们决定要在楼层停留多长时间。
+此外还有显示系统来显示各个系统的状态。
+
+实现这些系统需要对应的算法和数据结构，
+本文利用计算机常用的分层思想进行分析实现，
+最终系统大致结构如%
+\cref{fig:structure}
+
+\begin{figure}[H]
+  \centering
+  \def\svgwidth{\linewidth}
+  \input{figures/structure.pdf_tex}
+  \caption{电梯系统的架构图}
+  \label{fig:structure}
+\end{figure}
 
 
 

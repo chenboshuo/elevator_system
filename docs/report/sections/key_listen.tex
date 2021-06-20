@@ -12,7 +12,7 @@ $k_i = 0$表示按键按下。
 即四个状态检测到按键释放，
 认为当前状态$S_{N(t)}=1$,
 即当前为释放状态；
-其中$N(t)$为$t$时刻之前状态成功更新的次数;
+其中$N(t)$为$t$时刻之前按键状态成功更新的次数;
 若$K(t) = (0000)_2$
 即四次检测到按键按下，
 认为当前状态$S_{N(t)} = 0$，
@@ -67,5 +67,16 @@ $S_{N(t)},S_{N(t)-1}$是两个位变量，
   \end{codebox}
   \label{alg:imporove}
 \end{algorithm}
+
+\cref{fig:key_listen}%
+展示了具体的一种记录按键的情况
+
+\begin{figure}[H]
+  \centering
+  \def\svgwidth{\linewidth}
+  \input{figures/key_listen.pdf_tex}
+  \caption{按键读取模块的情况}
+  \label{fig:key_listen}
+\end{figure}
 
 \end{document}

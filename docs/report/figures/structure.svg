@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg7453"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="structure.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7455"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="14.65275"
+     inkscape:cx="505.19528"
+     inkscape:cy="570.30252"
+     inkscape:window-width="1321"
+     inkscape:window-height="686"
+     inkscape:window-x="45"
+     inkscape:window-y="45"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10004" />
+  </sodipodi:namedview>
+  <defs
+     id="defs7450">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168786"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168782"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168197"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168193"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168189"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168181"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168177"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168056"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168052"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168048"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168044"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168040"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect168036"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path118498" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect164280"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect164276"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect156270"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect150292"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect129057"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible;"
+       id="marker118771"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path118769" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect118767"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path118492" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path118489" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect118487"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect118219"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.146073;fill:#00b4d3;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect169908"
+       width="137.58333"
+       height="31.75"
+       x="23.8125"
+       y="87.3125"
+       ry="5.0862704e-06" />
+    <rect
+       style="opacity:0.146073;fill:#00b4d3;fill-opacity:1;stroke:none;stroke-width:0.267636;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect169132"
+       width="134.9375"
+       height="29.104172"
+       x="18.520834"
+       y="121.70833"
+       ry="5.0862632e-06" />
+    <rect
+       style="opacity:0.226785;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect163383"
+       width="185.20833"
+       height="7.9375"
+       x="5.2916665"
+       y="190.5" />
+    <rect
+       style="opacity:0.226785;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.272682;stroke-linejoin:bevel;stroke-opacity:1"
+       id="rect116672"
+       width="185.20833"
+       height="47.625011"
+       x="5.2916665"
+       y="150.8125" />
+    <rect
+       style="fill:#0000f6;stroke:none;stroke-width:0.264999;stroke-linejoin:bevel;stroke-opacity:1;fill-opacity:1;opacity:0.22678512"
+       id="rect113368"
+       width="185.20833"
+       height="15.875"
+       x="5.2916665"
+       y="71.4375" />
+    <rect
+       style="opacity:0.226785;fill:#00b4d3;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linejoin:bevel;stroke-opacity:1"
+       id="rect114272"
+       width="185.20833"
+       height="63.5"
+       x="5.2916665"
+       y="87.3125" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="11.884289"
+       y="78.238777"
+       id="text9694"><tspan
+         sodipodi:role="line"
+         id="tspan9692"
+         style="stroke-width:0.264583"
+         x="11.884289"
+         y="78.238777">应用层</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="43.920792"
+       y="79.375"
+       id="text16157"><tspan
+         sodipodi:role="line"
+         id="tspan16155"
+         style="stroke-width:0.264583"
+         x="43.920792"
+         y="79.375">请求系统</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="168.80424"
+       y="79.375"
+       id="text19131"><tspan
+         sodipodi:role="line"
+         id="tspan19129"
+         style="stroke-width:0.264583"
+         x="168.80424"
+         y="79.375">显示系统</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="106.36246"
+       y="95.250008"
+       id="text27352"><tspan
+         sodipodi:role="line"
+         id="tspan27350"
+         style="stroke-width:0.264583"
+         x="106.36246"
+         y="95.250008">调度系统</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="74.63311"
+       y="110.0667"
+       id="text30815"><tspan
+         sodipodi:role="line"
+         id="tspan30813"
+         style="stroke-width:0.264583"
+         x="74.63311"
+         y="110.0667">电梯方向判定算法</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="124.84196"
+       y="110.0667"
+       id="text35893"><tspan
+         sodipodi:role="line"
+         id="tspan35891"
+         style="stroke-width:0.264583"
+         x="124.84196"
+         y="110.0667">开关门控制算法</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.177565;stroke-linejoin:bevel"
+       id="rect42247"
+       width="89.958328"
+       height="29.104166"
+       x="70.114586"
+       y="88.635414" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="76.729164"
+       y="145.8344"
+       id="text44943"><tspan
+         sodipodi:role="line"
+         id="tspan44941"
+         style="stroke-width:0.264583"
+         x="76.729164"
+         y="145.8344">运行方向</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="76.729164"
+       y="172.36784"
+       id="text44943-6"><tspan
+         sodipodi:role="line"
+         id="tspan44941-2"
+         style="stroke-width:0.264583"
+         x="76.729164"
+         y="172.36784">方向显示</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="102.8081"
+       y="137.36221"
+       id="text47059"><tspan
+         sodipodi:role="line"
+         id="tspan47057"
+         style="stroke-width:0.264583"
+         x="102.8081"
+         y="137.36221">电梯</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="99.63311"
+       y="172.36221"
+       id="text47059-9"><tspan
+         sodipodi:role="line"
+         id="tspan47057-1"
+         style="stroke-width:0.264583"
+         x="99.63311"
+         y="172.36221">楼层显示</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="129.70648"
+       y="145.83722"
+       id="text50597"><tspan
+         sodipodi:role="line"
+         id="tspan50595"
+         style="stroke-width:0.264583"
+         x="129.70648"
+         y="145.83722">门状态</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="129.70648"
+       y="172.37067"
+       id="text50597-2"><tspan
+         sodipodi:role="line"
+         id="tspan50595-7"
+         style="stroke-width:0.264583"
+         x="129.70648"
+         y="172.37067">门状态显示</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="44.979168"
+       y="137.35939"
+       id="text53931"><tspan
+         sodipodi:role="line"
+         id="tspan53929"
+         style="stroke-width:0.264583"
+         x="44.979168"
+         y="137.35939">请求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="29.906866"
+       y="158.22098"
+       id="text56747"><tspan
+         sodipodi:role="line"
+         id="tspan56745"
+         style="stroke-width:0.264583"
+         x="29.906866"
+         y="158.22098">按键监听</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="29.906866"
+       y="172.37067"
+       id="text62313"><tspan
+         sodipodi:role="line"
+         id="tspan62311"
+         style="stroke-width:0.264583"
+         x="29.906866"
+         y="172.37067">按键显示</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="51.064587"
+       y="172.35939"
+       id="text65747"><tspan
+         sodipodi:role="line"
+         id="tspan65745"
+         style="stroke-width:0.264583"
+         x="51.064587"
+         y="172.35939">请求显示</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.270359;stroke-linejoin:bevel"
+       id="rect77266"
+       width="128.32292"
+       height="20.911173"
+       x="27.78125"
+       y="164.04167" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="129.72301"
+       y="182.5625"
+       id="text79580"><tspan
+         sodipodi:role="line"
+         id="tspan79578"
+         style="stroke-width:0.264583"
+         x="129.72301"
+         y="182.5625">LED灯控制</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="94.850418"
+       y="182.37349"
+       id="text83820"><tspan
+         sodipodi:role="line"
+         id="tspan83818"
+         style="stroke-width:0.264583"
+         x="94.850418"
+         y="182.37349">七段数码管控制</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="51.59375"
+       y="182.5625"
+       id="text87884"><tspan
+         sodipodi:role="line"
+         id="tspan87882"
+         style="stroke-width:0.264583"
+         x="51.59375"
+         y="182.5625">LED 点阵控制</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="27.435766"
+       y="109.37067"
+       id="text104139"><tspan
+         sodipodi:role="line"
+         id="tspan104137"
+         style="stroke-width:0.264583"
+         x="27.435766"
+         y="109.37067">算法</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="20.016907"
+       y="137.36221"
+       id="text106651"><tspan
+         sodipodi:role="line"
+         id="tspan106649"
+         style="stroke-width:0.264583"
+         x="20.016907"
+         y="137.36221">数据结构</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="11.909689"
+       y="158.75"
+       id="text109713"><tspan
+         sodipodi:role="line"
+         id="tspan109711"
+         style="stroke-width:0.264583"
+         x="11.909689"
+         y="158.75">物理层</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="11.90625"
+       y="123.82497"
+       id="text111821"><tspan
+         sodipodi:role="line"
+         id="tspan111819"
+         style="stroke-width:0.264583"
+         x="11.90625"
+         y="123.82497">逻辑层</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 174.625,82.020832 c 0,31.750268 0,63.500268 -3.08674,79.375128 -3.08673,15.87487 -9.26022,15.87487 -15.4341,15.87487"
+       id="path118485"
+       inkscape:path-effect="#path-effect118487"
+       inkscape:original-d="m 174.625,82.020832 c 2.6e-4,31.750268 2.6e-4,63.500268 0,95.249998 -6.17347,2.7e-4 -12.34696,2.7e-4 -18.52084,0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 15.875,63.499999 c 0,3.528042 0,7.055821 0,10.583333"
+       id="path118765"
+       inkscape:path-effect="#path-effect118767"
+       inkscape:original-d="m 15.875,63.499999 c 2.64e-4,3.528042 2.64e-4,7.055821 0,10.583333" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="10.583333"
+       y="60.854164"
+       id="text125913"><tspan
+         sodipodi:role="line"
+         id="tspan125911"
+         style="stroke-width:0.264583"
+         x="10.583333"
+         y="60.854164">外部事件</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 15.875,82.020832 c 0,12.347488 0,24.694708 0,37.041668"
+       id="path129055"
+       inkscape:path-effect="#path-effect129057"
+       inkscape:original-d="m 15.875,82.020832 c 2.64e-4,12.347488 2.64e-4,24.694708 0,37.041668" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="7.9375"
+       y="92.604164"
+       id="text133615"><tspan
+         sodipodi:role="line"
+         id="tspan133613"
+         style="stroke-width:0.264583"
+         x="7.9375"
+         y="92.604164">调</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="7.9375"
+         y="96.471283"
+         id="tspan134203">用</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 15.875,129.64583 c 0,7.93777 0,15.87527 0,23.8125"
+       id="path150290"
+       inkscape:path-effect="#path-effect150292"
+       inkscape:original-d="m 15.875,129.64583 c 2.64e-4,7.93777 2.64e-4,15.87527 0,23.8125" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="82.46888"
+       y="195.52112"
+       id="text152950"><tspan
+         sodipodi:role="line"
+         id="tspan152948"
+         style="stroke-width:0.264583"
+         x="82.46888"
+         y="195.52112">C 语言平台支持</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="7.9375"
+       y="134.9375"
+       id="text155894"><tspan
+         sodipodi:role="line"
+         id="tspan155892"
+         style="stroke-width:0.264583"
+         x="7.9375"
+         y="134.9375">数</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="7.9375"
+         y="138.80461"
+         id="tspan155896">据</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 15.875,161.39583 c 0,14.99332 0,29.98638 0,44.97917"
+       id="path156268"
+       inkscape:path-effect="#path-effect156270"
+       inkscape:original-d="m 15.875,161.39583 c 2.64e-4,14.99332 2.64e-4,29.98638 0,44.97917" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="7.9375"
+       y="214.3125"
+       id="text158320"><tspan
+         sodipodi:role="line"
+         id="tspan158318"
+         style="stroke-width:0.264583"
+         x="7.9375"
+         y="214.3125">物理部件响应</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 37.041666,174.625 c 3.528094,1.76405 7.055875,3.52793 10.583333,5.29166"
+       id="path164274"
+       inkscape:path-effect="#path-effect164276"
+       inkscape:original-d="m 37.041666,174.625 c 3.528042,1.76415 7.055821,3.52804 10.583333,5.29166" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.324047px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 55.562499,173.30208 c 0,1.32332 0,2.64623 0,3.96875"
+       id="path164278"
+       inkscape:path-effect="#path-effect164280"
+       inkscape:original-d="m 55.562499,173.30208 c 2.65e-4,1.32332 2.65e-4,2.64623 0,3.96875" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="99.21875"
+       y="145.52083"
+       id="text167111"><tspan
+         sodipodi:role="line"
+         id="tspan167109"
+         style="stroke-width:0.264583"
+         x="99.21875"
+         y="145.52083">楼层</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.235039;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect167443"
+       width="78.052094"
+       height="14.552084"
+       x="71.4375"
+       y="133.61458" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker118771)"
+       d="m 82.020832,174.625 c -6.173411,1.32287 -12.347024,2.64579 -18.520833,3.96875"
+       id="path168034"
+       inkscape:path-effect="#path-effect168036"
+       inkscape:original-d="m 82.020832,174.625 c -6.173345,1.32318 -12.346958,2.6461 -18.520833,3.96875" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.256181px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 82.020832,148.16667 c 0,6.61483 0,13.22941 0,19.84374"
+       id="path168038"
+       inkscape:path-effect="#path-effect168040"
+       inkscape:original-d="m 82.020832,148.16667 c 2.65e-4,6.61483 2.65e-4,13.22941 0,19.84374" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.256181px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 103.1875,148.16667 c 0,6.61483 0,13.22941 0,19.84374"
+       id="path168042"
+       inkscape:path-effect="#path-effect168044"
+       inkscape:original-d="m 103.1875,148.16667 c 2.6e-4,6.61483 2.6e-4,13.22941 0,19.84374" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.256181px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 134.9375,148.16667 c 0,6.61483 0,13.22941 0,19.84374"
+       id="path168046"
+       inkscape:path-effect="#path-effect168048"
+       inkscape:original-d="m 134.9375,148.16667 c 2.6e-4,6.61483 2.6e-4,13.22941 0,19.84374" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 136.26041,112.44792 c 0,9.26068 0,18.52109 0,27.78124"
+       id="path168050"
+       inkscape:path-effect="#path-effect168052"
+       inkscape:original-d="m 136.26041,112.44792 c 2.7e-4,9.26068 2.7e-4,18.52109 0,27.78124" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 83.343749,111.125 c 0,10.14262 0,20.28499 0,30.42708"
+       id="path168054"
+       inkscape:path-effect="#path-effect168056"
+       inkscape:original-d="m 83.343749,111.125 c 2.65e-4,10.14262 2.65e-4,20.28499 0,30.42708" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.187088px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 116.41668,96.572915 c 0,14.111375 0,28.222485 -0.6615,35.939415 -0.66151,7.71693 -1.9844,9.03982 -3.30725,10.36267"
+       id="path168175"
+       inkscape:path-effect="#path-effect168177"
+       inkscape:original-d="m 116.41668,96.572915 c 1.4e-4,14.111375 1.4e-4,28.222485 0,42.333335 -1.32281,1.32321 -2.6457,2.6461 -3.96875,3.96875" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 48.947916,82.020832 c 0,16.757208 0,33.514158 0,50.270828"
+       id="path168179"
+       inkscape:path-effect="#path-effect168181"
+       inkscape:original-d="m 48.947916,82.020832 c 2.65e-4,16.757208 2.65e-4,33.514158 0,50.270828" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25771px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 55.5625,136.26041 c 2.510401,0 5.02055,0 7.112218,-7.05558 2.091669,-7.05557 3.765068,-21.1664 10.66824,-28.22208 6.903172,-7.055668 19.035321,-7.055668 31.167462,-7.055668"
+       id="path168187"
+       inkscape:path-effect="#path-effect168189"
+       inkscape:original-d="m 55.5625,136.26041 c 2.510401,2.7e-4 5.02055,2.7e-4 7.530449,0 1.673717,-14.11112 3.347115,-28.22195 5.020298,-42.333328 12.132883,2.65e-4 24.265032,2.65e-4 36.397173,0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 35.71875,160.07291 c 0,2.6461 0,5.29194 0,7.9375"
+       id="path168191"
+       inkscape:path-effect="#path-effect168193"
+       inkscape:original-d="m 35.71875,160.07291 c 2.64e-4,2.6461 2.64e-4,5.29194 0,7.9375" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker118771)"
+       d="m 48.947916,140.22916 c 0,4.85096 0,9.70166 1.102585,12.12688 1.102585,2.42521 3.307403,2.42521 4.4097,4.63024 1.102298,2.20504 1.102298,6.61468 1.102298,11.02413"
+       id="path168195"
+       inkscape:path-effect="#path-effect168197"
+       inkscape:original-d="m 48.947916,140.22916 c 2.65e-4,4.85096 2.65e-4,9.70166 0,14.55209 2.20517,2.6e-4 4.409988,2.6e-4 6.614583,0 2.65e-4,4.41007 2.65e-4,8.81971 0,13.22916" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.23665px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 22.489583,127 c 1.323113,1.76415 2.646029,3.52804 3.96875,5.29167"
+       id="path168780"
+       inkscape:path-effect="#path-effect168782"
+       inkscape:original-d="m 22.489583,127 c 1.323181,1.7641 2.646098,3.52799 3.96875,5.29167" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.244956px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 21.166666,119.0625 c 3.086848,-2.64587 6.173651,-5.2917 9.260417,-7.9375"
+       id="path168784"
+       inkscape:path-effect="#path-effect168786"
+       inkscape:original-d="m 21.166666,119.0625 c 3.087071,-2.64561 6.173875,-5.29144 9.260417,-7.9375" />
+  </g>
+</svg>
