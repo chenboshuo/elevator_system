@@ -20,7 +20,8 @@
   \caption{方向确定的算法}
   \begin{codebox}
     \Procname{get\_direction($f(t),d(t),R,C$)}
-      \li \If $d(t) = 0$: \Comment 当前无方向
+      \li \If $d(t) = 0$:
+        \Comment 当前无方向 \label{ln:no_direction}
       \Then
         \li \If $R \neq \emptyset $: \Comment 电梯内还有请求
         \Then
@@ -29,24 +30,25 @@
         \li \Else \If $C \neq \emptyset$: \Comment 电梯外有楼层呼叫请求
         % \Then
           \li $f(s) \gets
-            f \left(\min \{s|(f(s),D_{f(x)}) \in C\} \right)$ \Comment 先来先服务
+            f \left(\min \{s|(f(s),D_{f(x)}) \in C\} \right)$ \Comment 先来先服务 \label{ln:out}
         % \End
-        \li \Else: \Comment 无请求就回到初始位置
+        \li \Else: \Comment 无请求就回到初始位置 \label{ln:return}
         % \Then
-          \li $f(s) \gets f(0)$
+          \li $f(s) \gets f(0)$ \label{ln:return2}
         \End
         \li $d(t) \gets \func{sign}(f(s)-f(t))$ \Comment 到目标差的符号为电梯新的运行方向
         \li \Return $d(t)$
       \End
       \li\Else: \Comment $d(t) \neq 0$:
       \Then
-        \li $R_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, f(s) \in R\}$
+        \li $R_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, f(s) \in R\}$ \label{ln:req_same}
           \Comment 同方向电梯内请求集合
-        \li $C_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, (f(s),D_{f(s)}) \in C\}$
+        \li $C_{f(t)} \gets \{f(s) | [f(s)-f(t)]d(t) \geq 0, (f(s),D_{f(s)}) \in C\}$ \label{ln:call_same}
           \zi \> \Comment 楼层在当前电梯运行方向的楼层呼叫集合
-        \li \If $R_{f(t)} = \emptyset$ \kw{and} $C_{f(t)} = \emptyset$: \Comment 该方向无法满足请求
+        \li \If $R_{f(t)} = \emptyset \land C_{f(t)} = \emptyset$:
+          \Comment 该方向无法满足请求 \label{ln:not_fit}
         \Then
-          \li \Return $0$ \Comment 清除方向
+          \li \Return $0$ \Comment 清除方向 \label{ln:erase}
         \li \Else:
           \li \Return $d(t)$ \Comment 保持同方向
         \End
@@ -54,17 +56,45 @@
   \end{codebox}
   \label{alg:get_direction}
 \end{algorithm}
-具体实现的函数是直接修改电梯的信息，
-没有返回值，
-以便于更高效的控制。
-此外，第\ref{ln:fifs}行使用的原则是先来先服务，
+
+决定电梯运行方向首先考虑最简单的情况，
+当电梯当前无方向(第\ref{ln:no_direction}行)时，
+检查请求并判断目标楼层，
+电梯内外请求是相同的，
+只需要考虑请求对应楼层(第\ref{ln:fifs},\ref{ln:out}行),
+但是由于数据结构定义的不同
+还是需要讨论电梯内请求还是电梯外请求，
+第\ref{ln:fifs}行使用的原则是先来先服务，
 尽可能的防止长时间等待，
 但是在本系统的实现中，
 由于内存限制，
 直接寻找任意一层的请求，
 复杂调度系统中应该使用这一类数据结构和调度算法。
 
+对于无方向无请求的情况，
+这里设置为返回到初始楼层
+($\ref{ln:return} \sim \ref{ln:return2}$行)，
+这样如果楼层较高，
+多个电梯可以停留在不同位置，
+例如两个电梯可以一个在顶层，一个在底层
+方便电梯快速响应，
+当然该电梯系统只有一个电梯三层楼，
+这种优化效果并不明显
+
+如果电梯具有方向，
+需要知道可以满足的请求集合
+$R_{f(t)},C_{f(t)}$
+(第$\ref{ln:req_same} \sim \ref{ln:call_same}$行),
+如果该方向不能满足任何需要，
+即
+$R_{f(t)} = \emptyset \land C_{f(t)} = \emptyset$
+(第\ref{ln:not_fit}行),
+需要清除方向重新判定(第\ref{ln:erase}行)
 
 
+具体实现的函数没有返回值，
+而是直接修改电梯的信息，
+这样有利于提高效率，
+以便于更高效的控制。
 
 \end{document}

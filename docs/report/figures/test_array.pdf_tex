@@ -1,0 +1,69 @@
+%% Creator: Inkscape 1.1 (1:1.1+202105261517+ce6663b3b7), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'test_array.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{786.83323908bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.56037533)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{test_array.pdf}}%
+    \put(0.03156441,0.31159326){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{0}{s}$ 亮起 \end{tabular}}}}%
+    \put(-0.00084397,0.03135709){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{6}{s}$ z左上角亮点熄灭 \end{tabular}}}}%
+    \put(0.29083175,0.0313572){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{7}{s}$ z左上角重新亮起 \end{tabular}}}}%
+    \put(0.53675311,0.0313572){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{8}{s}$ z左上角重新熄灭 \end{tabular}}}}%
+    \put(0.80745475,0.0313572){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{9}{s}$ 左箭头变为下方向 \end{tabular}}}}%
+    \put(0.2774871,0.31159326){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{1}{s}$ 熄灭 \end{tabular}}}}%
+    \put(0.54942433,0.31105759){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{2}{s}$ 再次亮起 \end{tabular}}}}%
+    \put(0.79153094,0.31105759){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\SI{4}{s}$ 左边显示上箭头 \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{test_array.pdf}}%
+    \put(0.53675405,0.00085406){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}右边同时产生向上箭头\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{test_array.pdf}}%
+  \end{picture}%
+\endgroup%

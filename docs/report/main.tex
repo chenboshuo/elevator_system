@@ -1,10 +1,11 @@
 \documentclass[pdfCover]{myreport} % 需要pdf封面
 % \documentclass{myreport}
-\title{测试myreport}
+\title{嵌入式期末课程设计}
 \author{陈伯硕}
 \date{\today}
 
-\usepackage{todonotes}
+
+% \usepackage{todonotes}
 
 \usepackage{subfiles}
 \begin{document}
@@ -54,21 +55,23 @@
       \subfile{sections/led_array}
 
 
-
 \section{系统调试及实现}
+  \subfile{sections/debug}
   \subsection{按键功能调试}
     \subfile{sections/test_key}
   \subsection{点阵显示模块的测试}
     \subfile{sections/test_array}
   \subsection{开关门的测试}
     \subfile{sections/test_door}
+  \subsection{系统性能分析}
+    \subfile{sections/system_analyse}
 
 
 \newpage
 \section{设计总结}
   \subfile{sections/opinion}
 
-
+\newpage
 \bibliography{reference}
 \nocite{*}
 \end{document}
