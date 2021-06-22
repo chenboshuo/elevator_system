@@ -23,7 +23,9 @@
  */
 __bit close_calls(struct Elevator* elevator) {
   unsigned char calling_direction =
-      (elevator->direction == UP) ? UP_CALL : DOWN_CALL;
+      (elevator->direction == DOWN)
+          ? DOWN_CALL
+          : UP_CALL;  // 一般一楼无方向，我们也认为向上
   __bit has_closed_calls =
       has_called[calling_direction][elevator->current_floor];
 
@@ -153,7 +155,7 @@ void get_direction(struct Elevator* elevator) {
     // 若目标楼层出范围，说明没有请求，我们消除运行方向
     if (target_floor == UNDERFLOW || target_floor == 3) {
       elevator->direction = NO_DIRECTION;
-      elevator->clock = ELEVATOR_BEGIN_WAITING_TIME;
+      // elevator->clock = ELEVATOR_BEGIN_WAITING_TIME;
     }
   }
 }
