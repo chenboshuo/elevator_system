@@ -58,7 +58,7 @@ void reload_and_update() interrupt T0_OVERFLOW {
   // if (right_arrive_floor) {
   //   ;
   // }
-  refresh_left_elevator();
+  refresh_elevator(&left_elevator);
   // refresh_right_elevator();
 
   // 更新计数器初值

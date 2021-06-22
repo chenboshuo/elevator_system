@@ -13,6 +13,11 @@
 #define LEFT_ELEVATOR 0   //!< 0 代表左边机位
 #define RIGHT_ELEVATOR 1  //!< 1 代表右边机位
 
+#define ELEVATOR_START_MOMENT 0           //!< 电梯启动的时间戳
+#define ELEVATOR_BEGIN_WAITING_TIME 1500  //!< 电梯进行楼层等待的时间段
+
+#define CLOCK_SIZE 6000  //!< 定义左边电梯时钟大小
+
 /// 电梯实体对应数据结构 注意current_floor 0 代表一楼
 struct Elevator {
   unsigned char current_floor;
@@ -20,6 +25,7 @@ struct Elevator {
   int direction;  // 记录电梯运行方向
 
   unsigned char direction_lamp_loc;
+  unsigned int clock;
   // unsigned char level_lamp_loc;  // 显示楼层的数码管的位置
   // } left_elevator, right_elevator;
 } left_elevator;
@@ -33,6 +39,7 @@ void init_left_evevator() {
   left_elevator.direction = NO_DIRECTION;  // 记录电梯运行方向
   left_elevator.id = LEFT_ELEVATOR;
   left_elevator.direction_lamp_loc = LEFT_SYMBOL;
+  left_elevator.clock = 0;
   // left_elevator.level_lamp_loc = 5;
 }
 

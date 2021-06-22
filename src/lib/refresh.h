@@ -16,11 +16,7 @@
 
 #define FLASH_UNIT_SIZE 11  //!< 要刷新的单元数目
 
-#define ELEVATOR_START_MOMENT 0           //!< 电梯启动的时间戳
-#define ELEVATOR_BEGIN_WAITING_TIME 1500  //!< 电梯进行楼层等待的时间段
-
-#define LEFT_CLOCK_SIZE 6000         //!< 定义左边电梯时钟大小
-static unsigned int left_clock = 0;  //!< 左电梯的时钟
+// static unsigned int left_clock = 0;  //!< 左电梯的时钟
 
 /**
  * 更新显示的模块
@@ -78,10 +74,11 @@ void refresh_key_line() {
   switch (key_line) {
     case 1:  // 第二行按键作为左边电梯内目标楼层的标识
       if (is_just_pressed(1, 3)) {  // 一行三列作为开门键
-        if (left_clock > ELEVATOR_BEGIN_WAITING_TIME &&
-            left_clock < READY_MOMENT) {  // 电梯处于等待运行状态,响应打开
+        if (left_elevator.clock > ELEVATOR_BEGIN_WAITING_TIME &&
+            left_elevator.clock <
+                READY_MOMENT) {  // 电梯处于等待运行状态,响应打开
           bit_appear(2, 1);
-          left_clock = OPEN_MOMENT_1;
+          left_elevator.clock = OPEN_MOMENT_1;
         }
       } else if (is_just_released(1, 3)) {
         bit_disappear(2, 1);
@@ -134,8 +131,9 @@ void refresh_key_line() {
       // 响应关门请求，三行三列表示关门
       if (is_just_pressed(3, 3)) {
         bit_appear(2, 2);
-        if (left_clock > OPEN_MOMENT_4 && left_clock <= READY_TO_CLOSE_MOMENT) {
-          left_clock = READY_TO_CLOSE_MOMENT;
+        if (left_elevator.clock > OPEN_MOMENT_4 &&
+            left_elevator.clock <= READY_TO_CLOSE_MOMENT) {
+          left_elevator.clock = READY_TO_CLOSE_MOMENT;
         }
       } else if (is_just_released(3, 3)) {
         bit_disappear(2, 2);
@@ -151,18 +149,18 @@ void refresh_key_line() {
   ++ms_count;
 }
 
-void refresh_left_elevator() {
+void refresh_elevator(struct Elevator* elevator) {
   static __bit need_responce = FALSE;
-  if (left_clock == ELEVATOR_START_MOMENT) {  // 启动电梯
-    get_direction(&left_elevator);
-    show_direction(&left_elevator);                        // 显示运行方向
-  } else if (left_clock == ELEVATOR_BEGIN_WAITING_TIME) {  // 到达楼层
-    arrive(&left_elevator);
-  } else if (left_clock > ELEVATOR_BEGIN_WAITING_TIME) {  // 在楼层等待
-    need_responce |= close_calls(&left_elevator);
-    need_responce |= close_requests(&left_elevator);
+  if (elevator->clock == ELEVATOR_START_MOMENT) {  // 启动电梯
+    get_direction(elevator);
+    show_direction(elevator);  // 显示运行方向
+  } else if (elevator->clock == ELEVATOR_BEGIN_WAITING_TIME) {  // 到达楼层
+    arrive(elevator);
+  } else if (elevator->clock > ELEVATOR_BEGIN_WAITING_TIME) {  // 在楼层等待
+    need_responce |= close_calls(elevator);
+    need_responce |= close_requests(elevator);
     if (need_responce) {
-      switch (left_clock) {
+      switch (elevator->clock) {
         case OPEN_MOMENT_1:
         case OPEN_MOMENT_2:
         case OPEN_MOMENT_3:
@@ -179,11 +177,11 @@ void refresh_left_elevator() {
           need_responce = FALSE;
       }
     } else {
-      left_clock = ELEVATOR_START_MOMENT - 1;
+      elevator->clock = ELEVATOR_START_MOMENT - 1;
     }
   }
-  ++left_clock;
-  left_clock %= LEFT_CLOCK_SIZE;
+  ++(elevator->clock);
+  elevator->clock %= CLOCK_SIZE;
 }
 
 // void refresh_right_elevator() {
