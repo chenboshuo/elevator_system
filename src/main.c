@@ -49,16 +49,8 @@ void reload_and_update() interrupt T0_OVERFLOW {
   // 刷新键盘响应
   refresh_key_line();
 
-  // // 左边电梯到达
-  // if (left_arrive_floor) {
-  //   ;
-  // }
-  //
-  // // 右边电梯到达
-  // if (right_arrive_floor) {
-  //   ;
-  // }
-  refresh_elevator(&left_elevator);
+  // 刷新坐电梯状态
+  update_elevator_status(&left_elevator);
   // refresh_right_elevator();
 
   // 更新计数器初值

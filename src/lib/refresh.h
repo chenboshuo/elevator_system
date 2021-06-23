@@ -8,7 +8,7 @@
 
 #include "alias.h"
 #include "dispatch_system.h"
-#include "door.h"
+// #include "door.h"
 #include "key.h"
 #include "led_array.h"
 #include "requests.h"
@@ -148,53 +148,6 @@ void refresh_key_line() {
   // 更新闪烁寄存器
   ++ms_count;
 }
-
-void refresh_elevator(struct Elevator* elevator) {
-  static __bit need_responce = FALSE;
-  if (elevator->clock == ELEVATOR_START_MOMENT) {  // 启动电梯
-    get_direction(elevator);
-    show_direction(elevator);  // 显示运行方向
-  } else if (elevator->clock == ELEVATOR_BEGIN_WAITING_TIME) {  // 到达楼层
-    arrive(elevator);
-  } else if (elevator->clock > ELEVATOR_BEGIN_WAITING_TIME) {  // 在楼层等待
-    need_responce |= close_calls(elevator);
-    need_responce |= close_requests(elevator);
-    if (need_responce) {
-      switch (elevator->clock) {
-        case OPEN_MOMENT_1:
-        case OPEN_MOMENT_2:
-        case OPEN_MOMENT_3:
-        case OPEN_MOMENT_4:
-          open_door(4);
-          break;
-        case CLOSE_MOMENT_1:
-        case CLOSE_MOMENT_2:
-        case CLOSE_MOMENT_3:
-        case CLOSE_MOMENT_4:
-          close_door(4);
-          break;
-        case READY_MOMENT:
-          need_responce = FALSE;
-      }
-    } else {
-      elevator->clock = ELEVATOR_START_MOMENT - 1;
-    }
-  }
-  ++(elevator->clock);
-  elevator->clock %= CLOCK_SIZE;
-}
-
-// void refresh_right_elevator() {
-//   static unsigned int right_clock = 0;
-//   switch (right_clock) {
-//     case 0:
-//       get_direction(&right_elevator);
-//       break;
-//     case 0x0FFF:
-//       arrive(&right_elevator);
-//   }
-//   ++right_clock;
-// }
 
 ///@}
 

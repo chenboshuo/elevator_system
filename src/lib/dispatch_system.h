@@ -7,6 +7,7 @@
 #define DISPATCH_SYSTEM_H
 
 #include "direction.h"
+#include "door.h"
 #include "elevator.h"
 #include "requests.h"
 #include "system_header.h"
@@ -143,8 +144,7 @@ void get_direction(struct Elevator* elevator) {
          target_floor != UNDERFLOW && target_floor < 3 &&
          !has_requested[elevator->id][target_floor] &&
          !has_called[UP_CALL][target_floor] &&
-         !has_called[DOWN_CALL]
-                    [target_floor];  // TODO 逻辑不对，高楼层的反方向应该被满足
+         !has_called[DOWN_CALL][target_floor];
          target_floor += elevator->direction) {
       ;
     }
@@ -158,6 +158,41 @@ void get_direction(struct Elevator* elevator) {
       // elevator->clock = ELEVATOR_BEGIN_WAITING_TIME;
     }
   }
+}
+
+void update_elevator_status(struct Elevator* elevator) {
+  static __bit need_responce = FALSE;
+  if (elevator->clock == ELEVATOR_START_MOMENT) {  // 启动电梯
+    get_direction(elevator);
+    show_direction(elevator);  // 显示运行方向
+  } else if (elevator->clock == ELEVATOR_BEGIN_WAITING_TIME) {  // 到达楼层
+    arrive(elevator);
+  } else if (elevator->clock > ELEVATOR_BEGIN_WAITING_TIME) {  // 在楼层等待
+    need_responce |= close_calls(elevator);
+    need_responce |= close_requests(elevator);
+    if (need_responce) {
+      switch (elevator->clock) {
+        case OPEN_MOMENT_1:
+        case OPEN_MOMENT_2:
+        case OPEN_MOMENT_3:
+        case OPEN_MOMENT_4:
+          open_door(4);
+          break;
+        case CLOSE_MOMENT_1:
+        case CLOSE_MOMENT_2:
+        case CLOSE_MOMENT_3:
+        case CLOSE_MOMENT_4:
+          close_door(4);
+          break;
+        case READY_MOMENT:
+          need_responce = FALSE;
+      }
+    } else {
+      elevator->clock = ELEVATOR_START_MOMENT - 1;
+    }
+  }
+  ++(elevator->clock);
+  elevator->clock %= CLOCK_SIZE;
 }
 
 ///@}
