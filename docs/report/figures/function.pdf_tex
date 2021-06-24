@@ -50,30 +50,33 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.55826413)%
+  \begin{picture}(1,0.56686172)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{function.pdf}}%
-    \put(0.85812392,0.32170985){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯内一层请求\end{tabular}}}}%
-    \put(0.85812392,0.29303739){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯内二层请求\end{tabular}}}}%
-    \put(0.85812392,0.26300099){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯内三层请求\end{tabular}}}}%
-    \put(0.85812392,0.53928941){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯的楼层显示\end{tabular}}}}%
-    \put(0.85812392,0.12913978){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外一层上行请求\end{tabular}}}}%
-    \put(0.85812392,0.10449341){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外二层上行请求\end{tabular}}}}%
-    \put(0.85812392,0.0781734){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外二层下行请求\end{tabular}}}}%
-    \put(0.85812392,0.05426533){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外三层下行请求\end{tabular}}}}%
+    \put(0.85812392,0.33030744){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯内一层请求\end{tabular}}}}%
+    \put(0.85812392,0.30163499){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯内二层请求\end{tabular}}}}%
+    \put(0.85812392,0.27159858){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯内三层请求\end{tabular}}}}%
+    \put(0.85812392,0.547887){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯的楼层显示\end{tabular}}}}%
+    \put(0.85774282,0.13773738){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外一层上行请求\end{tabular}}}}%
+    \put(0.85774282,0.11309101){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外二层上行请求\end{tabular}}}}%
+    \put(0.85774282,0.086771){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外二层下行请求\end{tabular}}}}%
+    \put(0.85774282,0.06286292){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}电梯外三层下行请求\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{function.pdf}}%
-    \put(0.85935014,0.51177603){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}模拟开门，亮灯表示开门\end{tabular}}}}%
+    \put(0.85935014,0.52037363){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}模拟开门，亮灯表示开门\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{function.pdf}}%
-    \put(-0.00046466,0.54740914){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第三层电梯内指示灯\end{tabular}}}}%
-    \put(-0.00046466,0.50106139){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第二层电梯内指示灯\end{tabular}}}}%
+    \put(-0.00046466,0.55600674){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第三层电梯内指示灯\end{tabular}}}}%
+    \put(-0.00046466,0.50965898){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第二层电梯内指示灯\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{function.pdf}}%
-    \put(-0.00046466,0.46117387){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第三层电梯内指示灯\end{tabular}}}}%
-    \put(0.00868217,0.42320602){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第一层上行指示灯\end{tabular}}}}%
-    \put(0.00868217,0.39421917){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第二层上行指示灯\end{tabular}}}}%
-    \put(0.00868217,0.36905632){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第二层下行指示灯\end{tabular}}}}%
-    \put(0.00868217,0.34400517){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第三层上行指示灯\end{tabular}}}}%
-    \put(0.00866926,0.31421739){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}运行方向指示灯\end{tabular}}}}%
+    \put(-0.00046466,0.46977146){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第三层电梯内指示灯\end{tabular}}}}%
+    \put(0.00868217,0.43180361){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第一层上行指示灯\end{tabular}}}}%
+    \put(0.00868217,0.40281676){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第二层上行指示灯\end{tabular}}}}%
+    \put(0.00868217,0.37765392){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第二层下行指示灯\end{tabular}}}}%
+    \put(0.00868217,0.35260277){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}第三层上行指示灯\end{tabular}}}}%
+    \put(0.00866926,0.32281498){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}运行方向指示灯\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{function.pdf}}%
+    \put(0.85869792,0.0324275){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}开门键\end{tabular}}}}%
+    \put(0.85761372,0.00105839){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}关门键\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{function.pdf}}%
   \end{picture}%
 \endgroup%
